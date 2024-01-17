@@ -2,6 +2,7 @@ import requests
 import json
 
 from checker import AvailabilityChecker
+from util.decorators import non_null_args, add_pre_delay
 
 BOOKING_CATEGORY_ID = "0"
 EQUIPMENT_CATEGORY_ID = "-32768"
@@ -14,6 +15,8 @@ class ParksCanadaAvailabilityChecker(AvailabilityChecker):
 	def __init__(self, resource_id):
 		self.resource_id = resource_id
 
+	@non_null_args
+	@add_pre_delay(delay=1)
 	def check_availability(self, date_range):
 		start_date, end_date = date_range
 		request_parameters = {'mapId': self.resource_id, 'bookingCategoryId': BOOKING_CATEGORY_ID,

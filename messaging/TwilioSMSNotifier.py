@@ -1,10 +1,12 @@
 from twilio.rest import Client
+
+from util.decorators import non_null_args
 from . import Notifier
 
 
 class TwilioSMSNotifier(Notifier):
+	@non_null_args
 	def __init__(self, account_sid, auth_token, phone_number):
-
 		self.client = Client(account_sid, auth_token)
 		self.phone_number = phone_number
 

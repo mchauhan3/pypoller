@@ -1,5 +1,4 @@
-from . import Message
-from . import Contact
+from . import Message, Contact
 
 
 class Notifier:

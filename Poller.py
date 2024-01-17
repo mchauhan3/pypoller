@@ -3,6 +3,7 @@ import time
 
 from checker import AvailabilityChecker
 from messaging import Notifier, Contact, Message
+from util.decorators import non_null_args
 
 
 class Poller:
@@ -21,14 +22,12 @@ class Poller:
 
         except Exception as e:
             print(e)
-            msg = Message(body=e, is_error=False)
+            msg = Message(body=str(e), is_error=True)
 
         list(map(lambda contact: self.notifier.notify(msg, contact), self.contacts))
 
+    @non_null_args
     def poll(self, list_of_date_ranges, frequency=30, jitter=5):
-        if not list_of_date_ranges:
-            print("No dates provided")
-            return
 
         number_of_times_polled = 1
 
