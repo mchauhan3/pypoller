@@ -1,3 +1,4 @@
 from .AvailabilityChecker import AvailabilityChecker
 from .ParksCanadaAvailabilityChecker import ParksCanadaAvailabilityChecker
 from .AnyAvailabilityChecker import AnyAvailabilityChecker
+from .AllAvailabilityChecker import AllAvailabilityChecker

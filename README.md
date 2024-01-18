@@ -13,12 +13,11 @@ poller-framework is a lightweight and easy-to-use framework for polling a resour
 - **Configurability**: The library is highly configurable and extensible. Adding support for any notification mechanism or resource should be seamless.
 ## Installation
 
+`pip install .`
+
 ## Usage
-Create a `.env` file by copying the `.env.sample` file, and replace the placeholder twilio parameters to enable notifications via SMS.
+For an example of how to use the library refer to `__main__.py`. It polls the Parks Canada website every 30 seconds and notifies users (provided via command line input) if there are any availabilities.
 
-For an example of how to use the library refer to `__main__.py`. Currently it is set up to poll the Parks Canada website every 30 seconds and notify users (provided via command line input) if there are any availabilities.
+To provide twilio credentials for `__main__.py`, create a `.env` file by copying the `.env.sample` file, and replace the placeholder twilio parameters to enable notifications via SMS.
+If twilio credentials are not provided, notifications will be printed to console.
 
-## Configuration
-
-
-## License
