@@ -12,28 +12,17 @@ class Poller:
         self.availabilityChecker = availability_checker
         self.contacts = contacts
 
-    def execute(self, list_of_date_ranges):
-        msg = None
-
-        try:
-            available_dates = filter(self.availabilityChecker.check_availability, list_of_date_ranges)
-            available_dates = [" to ".join(x) for x in available_dates]
-            msg = Message(body="Found Available Dates: {}".format(", ".join(available_dates)))
-
-        except Exception as e:
-            print(e)
-            msg = Message(body=str(e), is_error=True)
-
-        list(map(lambda contact: self.notifier.notify(msg, contact), self.contacts))
-
     @non_null_args
-    def poll(self, list_of_date_ranges, frequency=30, jitter=5):
+    def poll(self, execution_input, frequency=30, jitter=5):
 
         number_of_times_polled = 1
 
         while True:
-            self.execute(list_of_date_ranges)
+            self.execute(execution_input)
             print("Executed {} times".format(number_of_times_polled))
             number_of_times_polled += 1
             offset = random.randint(-jitter, jitter)
             time.sleep(frequency + offset)
+
+    def execute(self, execution_input):
+        raise NotImplementedError()

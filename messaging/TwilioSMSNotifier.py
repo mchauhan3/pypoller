@@ -1,7 +1,7 @@
 from twilio.rest import Client
 
 from util.decorators import non_null_args
-from . import Notifier
+from . import Notifier, Contact, Message
 
 
 class TwilioSMSNotifier(Notifier):
@@ -10,11 +10,8 @@ class TwilioSMSNotifier(Notifier):
 		self.client = Client(account_sid, auth_token)
 		self.phone_number = phone_number
 
-	def notify(self, msg, receiver):
-		if not receiver:
-			print("Receiver not provided, skipping")
-			return
-
+	@non_null_args
+	def notify(self, msg: Message, receiver: Contact):
 		if not receiver.phone_number:
 			print("Receiver phone number not provided, skipping")
 			return

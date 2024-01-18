@@ -1,7 +1,7 @@
 import requests
 import json
 
-from checker import AvailabilityChecker
+from . import AvailabilityChecker
 from util.decorators import non_null_args, add_pre_delay
 
 BOOKING_CATEGORY_ID = "0"

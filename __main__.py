@@ -1,16 +1,15 @@
 import os
 from dotenv import load_dotenv
 
-from Poller import Poller
+from poller import DateRangePoller
 from checker import ParksCanadaAvailabilityChecker
-from constants import GREEN_POINT_ID, TWILIO_AUTH_TOKEN_KEY, TWILIO_PHONE_NUMBER_KEY, TWILIO_ACCOUNT_SID_KEY
+from util.constants import GREEN_POINT_ID, TWILIO_AUTH_TOKEN_KEY, TWILIO_PHONE_NUMBER_KEY, TWILIO_ACCOUNT_SID_KEY
 from messaging import Contact, TwilioSMSNotifier, ConsoleNotifier
 
 load_dotenv()
 notifier = None
 
-# Null contact for default notifications to console
-contacts = [None]
+contacts = []
 
 try:
 	twilio_account_sid = os.getenv(TWILIO_ACCOUNT_SID_KEY)
@@ -22,6 +21,7 @@ except ValueError as e:
 	print(e)
 	print("Twilio arguments not provided, using console notifier")
 	notifier = ConsoleNotifier()
+	contacts.append(Contact(name="DEFAULT", phone_number="", email="", notify_error=True))
 
 availabilityChecker = ParksCanadaAvailabilityChecker(resource_id=GREEN_POINT_ID)
 
@@ -38,9 +38,10 @@ def configure_contacts():
 		add_contact = input("Add another contact? Y/N \n")
 
 
-configure_contacts()
+if not (isinstance(notifier, ConsoleNotifier)):
+	configure_contacts()
 
-poller = Poller(notifier, availabilityChecker, contacts)
+poller = DateRangePoller(notifier, availabilityChecker, contacts)
 
 list_of_date_ranges = [
 	("2024-08-01", "2024-08-05"),
