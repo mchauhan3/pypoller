@@ -18,7 +18,10 @@ class Poller:
         number_of_times_polled = 1
 
         while True:
-            self.execute(execution_input)
+            msg = self.execute(execution_input)
+            if msg:
+                list(map(lambda x: self.notifier.notify(msg, x), self.contacts))
+
             print("Executed {} times".format(number_of_times_polled))
             number_of_times_polled += 1
             offset = random.randint(-jitter, jitter)

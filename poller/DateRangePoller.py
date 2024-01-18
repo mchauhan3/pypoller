@@ -15,4 +15,4 @@ class DateRangePoller(Poller):
 			print(e)
 			msg = Message(body=str(e), is_error=True)
 
-		list(map(lambda contact: self.notifier.notify(msg, contact), self.contacts))
+		return msg
