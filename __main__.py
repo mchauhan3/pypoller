@@ -13,8 +13,6 @@ import datetime as dt
 load_dotenv()
 notifier = None
 
-contacts = []
-
 try:
 	twilio_account_sid = os.getenv(TWILIO_ACCOUNT_SID_KEY)
 	twilio_auth_token = os.getenv(TWILIO_AUTH_TOKEN_KEY)
@@ -25,7 +23,6 @@ except ValueError as e:
 	print(e)
 	print("Twilio arguments not provided, using console notifier")
 	notifier = ConsoleNotifier()
-	contacts.append(Contact(name="DEFAULT", phone_number="", email="", notify_error=True))
 
 EQUIPMENT_CATEGORY_ID = "-32768"
 SUB_EQUIPMENT_CATEGORY_ID = "-32767"
@@ -47,6 +44,7 @@ availability_checker = drive_in_availability_checker + otentik_availability_chec
 
 
 def configure_contacts():
+	contacts = []
 	add_contact = input("Add contact? Y/N \n")
 	while add_contact == "Y":
 		name = input("Contact name? \n")
@@ -56,12 +54,12 @@ def configure_contacts():
 		contacts.append(Contact(name, phone_number, email, notify_error))
 		print("Added contact!")
 		add_contact = input("Add another contact? Y/N \n")
+		contacts.append(add_contact)
+	return contacts
 
 
 if not (isinstance(notifier, ConsoleNotifier)):
-	configure_contacts()
-
-notifier.add_contacts(contacts)
+	notifier.add_contacts(configure_contacts())
 
 poller = Poller(availability_checker, notifier)
 
