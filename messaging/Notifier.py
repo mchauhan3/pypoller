@@ -6,7 +6,6 @@ from . import Message, Contact, CombinedMessage
 
 class Notifier:
 
-	@non_null_args
 	def __init__(self, contacts: List[Contact] = []):
 		self.contacts = contacts
 

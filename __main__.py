@@ -7,7 +7,7 @@ from resource.request import DateRangeRequest
 from util.constants import (
 	GREEN_POINT_DRIVE_IN_CAMPSITES_ID, GREEN_POINT_WALK_IN_CAMPSITES_ID,
 	TWILIO_AUTH_TOKEN_KEY, TWILIO_PHONE_NUMBER_KEY, TWILIO_ACCOUNT_SID_KEY)
-from messaging import Contact, TwilioSMSNotifier, ConsoleNotifier
+from messaging import Contact, TwilioSMSNotifier, ConsoleNotifier, TryNextOnFailNotifier
 import datetime as dt
 
 load_dotenv()
@@ -60,6 +60,7 @@ def configure_contacts():
 
 if not (isinstance(notifier, ConsoleNotifier)):
 	notifier.add_contacts(configure_contacts())
+	notifier = TryNextOnFailNotifier([notifier, ConsoleNotifier()])
 
 poller = Poller(availability_checker, notifier)
 

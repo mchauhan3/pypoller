@@ -24,6 +24,3 @@ class Poller:
             number_of_times_polled += 1
             offset = random.randint(-jitter, jitter)
             time.sleep(frequency + offset)
-
-    def execute(self, execution_input):
-        raise NotImplementedError()

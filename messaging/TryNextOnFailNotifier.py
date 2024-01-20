@@ -14,7 +14,8 @@ class TryNextOnFailNotifier(Notifier):
 			try:
 				notifier.notify(msg)
 				return
-			except NotificationException:
+			except NotificationException as e:
+				print(e)
 				pass
 
 		raise NotificationException("No successful notifiers")

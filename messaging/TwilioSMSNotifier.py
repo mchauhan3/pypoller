@@ -8,7 +8,6 @@ from .NotificationException import NotificationException
 
 
 class TwilioSMSNotifier(Notifier):
-	@non_null_args
 	def __init__(self, account_sid: str, auth_token: str, phone_number: str, contacts: List[Contact] = []):
 		super().__init__(contacts)
 		self.client = Client(account_sid, auth_token)

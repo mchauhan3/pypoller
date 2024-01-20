@@ -1,3 +1,5 @@
+from typing import Iterable
+
 from . import Message, Contact, Notifier
 from util.decorators import non_null_args
 
@@ -10,3 +12,9 @@ class CombinedNotifier(Notifier):
 
 	def notify_inner(self, msg: Message):
 		list(map(lambda x: x.notify(msg), self.notifiers))
+
+	def add_contact(self, contact: Contact):
+		self.notifiers.add_contact(contact)
+
+	def add_contacts(self, contacts: Iterable[Contact]):
+		self.notifiers.add_contacts(contacts)
