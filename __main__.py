@@ -1,10 +1,14 @@
 import os
 from dotenv import load_dotenv
 
-from poller import DateRangePoller
-from checker import ParksCanadaAvailabilityChecker
-from util.constants import GREEN_POINT_ID, TWILIO_AUTH_TOKEN_KEY, TWILIO_PHONE_NUMBER_KEY, TWILIO_ACCOUNT_SID_KEY
+from poller import Poller
+from resource import ParksCanadaChecker
+from resource.request import DateRangeRequest
+from util.constants import (
+	GREEN_POINT_DRIVE_IN_CAMPSITES_ID, GREEN_POINT_WALK_IN_CAMPSITES_ID,
+	TWILIO_AUTH_TOKEN_KEY, TWILIO_PHONE_NUMBER_KEY, TWILIO_ACCOUNT_SID_KEY)
 from messaging import Contact, TwilioSMSNotifier, ConsoleNotifier
+import datetime as dt
 
 load_dotenv()
 notifier = None
@@ -23,7 +27,23 @@ except ValueError as e:
 	notifier = ConsoleNotifier()
 	contacts.append(Contact(name="DEFAULT", phone_number="", email="", notify_error=True))
 
-availabilityChecker = ParksCanadaAvailabilityChecker(resource_id=GREEN_POINT_ID)
+EQUIPMENT_CATEGORY_ID = "-32768"
+SUB_EQUIPMENT_CATEGORY_ID = "-32767"
+
+PARKS_CANADA_ACCOMMODATION_BOOKING_ID = "1"
+
+drive_in_availability_checker = ParksCanadaChecker(
+	resource_id=GREEN_POINT_DRIVE_IN_CAMPSITES_ID,
+	equipment_category_id=EQUIPMENT_CATEGORY_ID,
+	sub_equipment_category_id=SUB_EQUIPMENT_CATEGORY_ID)
+
+otentik_availability_checker = ParksCanadaChecker(
+	resource_id=GREEN_POINT_WALK_IN_CAMPSITES_ID,
+	booking_category_id=PARKS_CANADA_ACCOMMODATION_BOOKING_ID,
+	name_override='Otentik'
+)
+
+availability_checker = drive_in_availability_checker + otentik_availability_checker
 
 
 def configure_contacts():
@@ -41,12 +61,12 @@ def configure_contacts():
 if not (isinstance(notifier, ConsoleNotifier)):
 	configure_contacts()
 
-poller = DateRangePoller(notifier, availabilityChecker, contacts)
+notifier.add_contacts(contacts)
 
-list_of_date_ranges = [
-	("2024-08-01", "2024-08-05"),
-	("2024-08-02", "2024-08-06"),
-	("2024-08-03", "2024-08-07")
-]
+poller = Poller(availability_checker, notifier)
 
-poller.poll(list_of_date_ranges)
+date_range_request = DateRangeRequest(
+	start_date=dt.datetime(2024, 8, 1),
+	end_date=dt.datetime(2024, 8, 5),
+)
+poller.poll(date_range_request)

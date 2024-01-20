@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
 setup(
     name='poller-framework',
     version='1.0',
-    packages=['util', 'checker', 'messaging', 'poller'],
+    packages=['util', 'resource', 'messaging', 'poller'],
     url='https://github.com/mchauhan3/poller-framework',
     license='MIT',
     author='mohitc',

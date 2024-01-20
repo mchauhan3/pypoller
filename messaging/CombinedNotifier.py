@@ -4,8 +4,9 @@ from util.decorators import non_null_args
 
 class CombinedNotifier(Notifier):
 	@non_null_args
-	def __init__(self, l_notifiers):
-		self.l_notifier = l_notifiers
+	def __init__(self, notifiers):
+		super().__init__()
+		self.notifiers = notifiers
 
-	def notify(self, msg: Message, receiver: Contact):
-		list(map(lambda x: x.notify(msg, receiver), self.l_notifier))
+	def notify_inner(self, msg: Message):
+		list(map(lambda x: x.notify(msg), self.notifiers))

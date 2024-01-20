@@ -1,6 +1,6 @@
-from messaging import Notifier, Message, Contact
+from messaging import Notifier, Message
 
 
 class ConsoleNotifier(Notifier):
-	def notify(self, msg: Message, receiver: Contact):
+	def notify_inner(self, msg: Message):
 		print(msg.body)
