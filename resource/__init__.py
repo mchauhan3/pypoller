@@ -1,3 +1,4 @@
 from .ResourceChecker import ResourceChecker
 from .MulitpleResourceChecker import MultipleResourceChecker
 from .ParksCanadaChecker import ParksCanadaChecker
+from .USVisaResourceChecker import USVisaResourceChecker
