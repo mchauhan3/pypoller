@@ -75,8 +75,8 @@ class USVisaResourceChecker(ResourceChecker):
 		with sync_playwright() as playwright:
 			try:
 				run(playwright)
-		    except:
-		    	return USVisaResponse(available_dates=available_dates, is_error=True)
+			except:
+				return USVisaResponse(available_dates=available_dates, is_error=True)
 
 		return USVisaResponse(available_dates=available_dates)
 
