@@ -14,7 +14,9 @@ class CombinedNotifier(Notifier):
 		list(map(lambda x: x.notify(msg), self.notifiers))
 
 	def add_contact(self, contact: Contact):
-		self.notifiers.add_contact(contact)
+		for notifier in self.notifiers:
+			notifier.add_contact(contacts)
 
 	def add_contacts(self, contacts: Iterable[Contact]):
-		self.notifiers.add_contacts(contacts)
+		for notifier in self.notifiers:
+			notifier.add_contacts(contacts)
