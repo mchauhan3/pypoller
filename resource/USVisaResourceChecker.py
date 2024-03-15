@@ -73,7 +73,10 @@ class USVisaResourceChecker(ResourceChecker):
 		    browser.close()
 
 		with sync_playwright() as playwright:
-		    run(playwright)
+			try:
+		    	run(playwright)
+		    except:
+		    	return USVisaResponse(available_dates=available_dates, is_error=True)
 
 		return USVisaResponse(available_dates=available_dates)
 
