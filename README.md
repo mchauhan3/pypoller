@@ -15,9 +15,12 @@ poller-framework is a lightweight and easy-to-use framework for polling a resour
 
 `pip install .`
 
+For playwrigt (US Visa):
+
+`playwright install`
+
 ## Usage
-For an example of how to use the library refer to `__main__.py`. It polls the Parks Canada website every 30 seconds and notifies users (provided via command line input) if there are any availabilities.
+Refer to examples to learn how to use the library.
 
-To provide twilio credentials for `__main__.py`, create a `.env` file by copying the `.env.sample` file, and replace the placeholder twilio parameters to enable notifications via SMS.
+To provide twilio credentials for twilio, create a `.env` file by copying the `.env.sample` file, and replace the placeholder twilio parameters to enable notifications via SMS.
 If twilio credentials are not provided, notifications will be printed to console.
-

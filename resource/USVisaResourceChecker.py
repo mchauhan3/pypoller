@@ -12,13 +12,15 @@ import json
 
 JS_SCRIPT = ("() => {"
 			"var req = new XMLHttpRequest();"
-             f"req.open('GET', '%s', false);"
-             "req.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');"
-             "req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');"
-             "req.send(null);"
-             "return req.responseText;"
-             "};")
+			 f"req.open('GET', '%s', false);"
+			 "req.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');"
+			 "req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');"
+			 "req.send(null);"
+			 "return req.responseText;"
+			 "};")
+
 DATE_FORMAT = "%Y-%m-%d"
+
 @dataclass
 class USVisaResponse(Response):
 	available_dates: List[str] = field(default_factory=lambda: [])
@@ -39,7 +41,6 @@ class USVisaResponse(Response):
 		return Message(body=message_body)
 
 class USVisaResourceChecker(ResourceChecker):
-	# https://ais.usvisa-info.com/en-ug/niv/schedule/50295138/appointment
 
 	@non_null_args
 	def __init__(self, embassy_id, schedule_id, facility_id, user_email, password): 
@@ -53,24 +54,24 @@ class USVisaResourceChecker(ResourceChecker):
 		available_dates = []
 
 		def run(playwright: Playwright):
-		    chromium = playwright.chromium
-		    browser = chromium.launch()
-		    page = browser.new_page()
-		    page.goto(self.sign_in_url)
-		    page.get_by_label("Email").fill(self.user_email)
-		    page.get_by_label("Password").fill(self.password)
-		    page.locator(".icheckbox").click()
-		    page.get_by_role("button", name="Sign in").click()
-		    expect(page.get_by_text("Continue")).to_be_visible()
-		    resp = page.evaluate(JS_SCRIPT % self.dates_url)
-		    resp = json.loads(resp)
-		    for d in resp:
-		    	date = d["date"]
-		    	date = dt.datetime.strptime(date, DATE_FORMAT)
-		    	if date >= date_range.start_date and date <= date_range.end_date:
-		    		available_dates.append(date)
+			chromium = playwright.chromium
+			browser = chromium.launch()
+			page = browser.new_page()
+			page.goto(self.sign_in_url)
+			page.get_by_label("Email").fill(self.user_email)
+			page.get_by_label("Password").fill(self.password)
+			page.locator(".icheckbox").click()
+			page.get_by_role("button", name="Sign in").click()
+			expect(page.get_by_text("Continue")).to_be_visible()
+			resp = page.evaluate(JS_SCRIPT % self.dates_url)
+			resp = json.loads(resp)
+			for d in resp:
+				date = d["date"]
+				date = dt.datetime.strptime(date, DATE_FORMAT)
+				if date >= date_range.start_date and date <= date_range.end_date:
+					available_dates.append(date)
 
-		    browser.close()
+			browser.close()
 
 		with sync_playwright() as playwright:
 			try:
