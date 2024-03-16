@@ -37,11 +37,11 @@ response = availability_checker.check_resource(date_range_request)
 ```
 ## Installation
 
-`pip install .`
+`pip install pypoller`
 
 For playwrigt (US Visa):
 
-`playwright install`
+`playwright install chromium`
 
 ## Usage
 Refer to examples to learn how to use the library.

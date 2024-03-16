@@ -1,14 +1,27 @@
 [project]
 name = "pypoller"
-version = "0.1.0"
+version = "0.1.2"
 description = "Lightweight polling and notification framework"
-license = {file = "LICENSE"}
 readme = "README.md"
-dynamic = ["dependencies"]
 authors = [{name = "Mohit Chauhan", email = "mhchauhan3@gmail.com"}]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "License :: OSI Approved :: MIT License",
+]
+requires-python = ">= 3.9"
+dependencies = [
+	"requests",
+	"playwright",
+	"twilio",
+	"typing_extensions",
+	"python-dotenv"
+]
 
-[tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
+[project.urls]
+"Homepage" = "https://www.mohitc.com/pypoller"
+"Source" = "https://github.com/mchauhan3/pypoller"
 
 [build-system]
 requires = ["setuptools>=61.0"]
