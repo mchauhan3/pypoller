@@ -111,11 +111,11 @@ Variables</h2></td></tr>
 <tr class="separator:a1d7d47a791a7c34592de6d9da2195e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2199ab4c8930c74d3176ab593ad9adba" id="r_a2199ab4c8930c74d3176ab593ad9adba"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2199ab4c8930c74d3176ab593ad9adba">FACILITY_ID</a> = &quot;106&quot;</td></tr>
 <tr class="separator:a2199ab4c8930c74d3176ab593ad9adba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bfff9fc91dc911190121ec30c17c196" id="r_a6bfff9fc91dc911190121ec30c17c196"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bfff9fc91dc911190121ec30c17c196">USER_EMAIL</a> = &quot;kotakf38@gmail.com&quot;</td></tr>
+<tr class="memitem:a6bfff9fc91dc911190121ec30c17c196" id="r_a6bfff9fc91dc911190121ec30c17c196"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bfff9fc91dc911190121ec30c17c196">USER_EMAIL</a> = &quot;user_email&quot;</td></tr>
 <tr class="separator:a6bfff9fc91dc911190121ec30c17c196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c6f2a339eee50ef556b357f877e6e08" id="r_a8c6f2a339eee50ef556b357f877e6e08"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c6f2a339eee50ef556b357f877e6e08">PASSWORD</a> = &quot;shrey1411&quot;</td></tr>
+<tr class="memitem:a8c6f2a339eee50ef556b357f877e6e08" id="r_a8c6f2a339eee50ef556b357f877e6e08"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c6f2a339eee50ef556b357f877e6e08">PASSWORD</a> = &quot;password&quot;</td></tr>
 <tr class="separator:a8c6f2a339eee50ef556b357f877e6e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b41f069bd13d08e4ec89b12b8abec4f" id="r_a4b41f069bd13d08e4ec89b12b8abec4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b41f069bd13d08e4ec89b12b8abec4f">availability_checker</a> = <a class="el" href="classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker.html">USVisaResourceChecker</a>(<a class="el" href="#aecf944afc1b7acf81b6817b6e8db29b0">UGANDA_EMBASSY</a>, <a class="el" href="#a1d7d47a791a7c34592de6d9da2195e3b">SCHEDULE_ID</a>, <a class="el" href="#a2199ab4c8930c74d3176ab593ad9adba">FACILITY_ID</a>, <a class="el" href="#a6bfff9fc91dc911190121ec30c17c196">USER_EMAIL</a>, <a class="el" href="#a8c6f2a339eee50ef556b357f877e6e08">PASSWORD</a>)</td></tr>
+<tr class="memitem:a4b41f069bd13d08e4ec89b12b8abec4f" id="r_a4b41f069bd13d08e4ec89b12b8abec4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b41f069bd13d08e4ec89b12b8abec4f">availability_checker</a></td></tr>
 <tr class="separator:a4b41f069bd13d08e4ec89b12b8abec4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa246fb2672ea0ebb4ab55982bfd989b9" id="r_aa246fb2672ea0ebb4ab55982bfd989b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa246fb2672ea0ebb4ab55982bfd989b9">notifier</a> = None</td></tr>
 <tr class="separator:aa246fb2672ea0ebb4ab55982bfd989b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,11 +156,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">availability_checker = <a class="el" href="classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker.html">USVisaResourceChecker</a>(<a class="el" href="#aecf944afc1b7acf81b6817b6e8db29b0">UGANDA_EMBASSY</a>, <a class="el" href="#a1d7d47a791a7c34592de6d9da2195e3b">SCHEDULE_ID</a>, <a class="el" href="#a2199ab4c8930c74d3176ab593ad9adba">FACILITY_ID</a>, <a class="el" href="#a6bfff9fc91dc911190121ec30c17c196">USER_EMAIL</a>, <a class="el" href="#a8c6f2a339eee50ef556b357f877e6e08">PASSWORD</a>)</td>
+          <td class="memname">availability_checker</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line"><span class="lineno">    1</span>=  USVisaResourceChecker(</div>
+<div class="line"><span class="lineno">    2</span>    UGANDA_EMBASSY, SCHEDULE_ID, FACILITY_ID, USER_EMAIL, PASSWORD</div>
+<div class="line"><span class="lineno">    3</span>)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5231221c2511051a4d2a66c4a032d8c7" name="a5231221c2511051a4d2a66c4a032d8c7"></a>
@@ -216,7 +219,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">str PASSWORD = &quot;shrey1411&quot;</td>
+          <td class="memname">str PASSWORD = &quot;password&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -314,7 +317,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">str USER_EMAIL = &quot;kotakf38@gmail.com&quot;</td>
+          <td class="memname">str USER_EMAIL = &quot;user_email&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
