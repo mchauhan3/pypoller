@@ -5,6 +5,7 @@ description = "Lightweight polling and notification framework"
 license = {file = "LICENSE"}
 readme = "README.md"
 dynamic = ["dependencies"]
+authors = [{name = "Mohit Chauhan", email = "mhchauhan3@gmail.com"}]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
