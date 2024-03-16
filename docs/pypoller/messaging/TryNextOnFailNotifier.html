@@ -94,11 +94,8 @@
     
             <div class="docstring"><p>Initialize the TryNextOnFailNotifier with a list of notifiers.</p>
 
-<h6 id="arguments">Arguments:</h6>
-
-<ul>
-<li><strong>notifiers:</strong>  List of Notifier instances to be tried in sequence.</li>
-</ul>
+<p>Args:
+    notifiers: List of Notifier instances to be tried in sequence.</p>
 </div>
 
 
@@ -126,17 +123,11 @@
     
             <div class="docstring"><p>Notify the contacts with the given message, trying each notifier in sequence until one succeeds.</p>
 
-<h6 id="arguments">Arguments:</h6>
+<p>Args:
+    msg (Message): The message to be sent.</p>
 
-<ul>
-<li><strong>msg (Message):</strong>  The message to be sent.</li>
-</ul>
-
-<h6 id="raises">Raises:</h6>
-
-<ul>
-<li><strong>NotificationException:</strong>  If no successful notifiers are found.</li>
-</ul>
+<p>Raises:
+    NotificationException: If no successful notifiers are found.</p>
 </div>
 
 

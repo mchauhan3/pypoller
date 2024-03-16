@@ -21,6 +21,17 @@
             <input type="search" placeholder="Search..." role="searchbox" aria-label="search"
                    pattern=".+" required>
 
+            <h2>Contents</h2>
+            <ul>
+  <li><a href="#pypoller">pypoller</a>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+  </ul></li>
+</ul>
+
 
             <h2>Submodules</h2>
             <ul>
@@ -44,7 +55,60 @@
                     <h1 class="modulename">
 pypoller    </h1>
 
-                
+                        <div class="docstring"><h1 id="pypoller">pypoller</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>pypoller is a lightweight and easy-to-use framework for polling a resource at regular intervals and providing notifications on any updates. It is designed to simplify the process of monitoring a remote service for changes and alerting users or systems when relevant updates occur.</p>
+
+<p>Detailed docs available at <a href="https://www.mohitc.com/pypoller/docs/">https://www.mohitc.com/pypoller/docs/</a></p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li><p><strong>Polling</strong>: The library allows you to define a polling interval, specifying how frequently the resource should be checked for updates.</p></li>
+<li><p><strong>Notifications</strong>: When a change is detected in the service, the library supports customizable notification mechanisms. Currently messaging via Twilio is implemented.</p></li>
+<li><p><strong>Configurability</strong>: The library is highly configurable and extensible. Adding support for any notification mechanism or resource should be seamless.</p></li>
+</ul>
+
+<p>All submodules can be used independently as well. For example, to check for availability of US Visa appointments:</p>
+
+<pre><code>UGANDA_EMBASSY = "en-ug"
+SCHEDULE_ID = "50295138"
+FACILITY_ID = "106"
+USER_EMAIL = "user_email"
+PASSWORD = "password"
+
+# Initialize resource checker for US Visa availability
+availability_checker = USVisaResourceChecker(
+    UGANDA_EMBASSY, SCHEDULE_ID, FACILITY_ID, USER_EMAIL, PASSWORD
+)
+
+date_range_request = DateRangeRequest(
+    start_date=dt.datetime(2024, 3, 14),
+    end_date=dt.datetime(2025, 7, 1),
+)
+
+response = availability_checker.check_resource(date_range_request)
+</code></pre>
+
+<h2 id="installation">Installation</h2>
+
+<p><code>pip install pypoller</code></p>
+
+<p>For playwrigt (US Visa):</p>
+
+<p><code>playwright install chromium</code></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Refer to examples to learn how to use the library.</p>
+
+<p>To provide twilio credentials for the examples, create a <code>.env</code> file by copying the <code>.env.sample</code> file, and replace the placeholder twilio parameters to enable notifications via SMS.</p>
+
+<p>If twilio credentials are not provided, notifications will be printed to console.</p>
+</div>
+
                 
                 
                 

@@ -236,11 +236,8 @@
     
             <div class="docstring"><p>Convert the response to a message format.</p>
 
-<h6 id="returns">Returns:</h6>
-
-<blockquote>
-  <p>Message: The message containing the response body.</p>
-</blockquote>
+<p>Returns:
+    Message: The message containing the response body.</p>
 </div>
 
 
@@ -280,15 +277,12 @@
     
             <div class="docstring"><p>Initialize the Parks Canada campsite checker.</p>
 
-<h6 id="arguments">Arguments:</h6>
-
-<ul>
-<li><strong>resource_id (str):</strong>  The ID of the resource.</li>
-<li><strong>booking_category_id (str):</strong>  The booking category ID. Default is "0".</li>
-<li><strong>equipment_category_id (str):</strong>  The equipment category ID. Default is None.</li>
-<li><strong>sub_equipment_category_id (str):</strong>  The sub-equipment category ID. Default is None.</li>
-<li><strong>name_override (str):</strong>  An optional name override for the campsite. Default is None.</li>
-</ul>
+<p>Args:
+    resource_id (str): The ID of the resource.
+    booking_category_id (str): The booking category ID. Default is "0".
+    equipment_category_id (str): The equipment category ID. Default is None.
+    sub_equipment_category_id (str): The sub-equipment category ID. Default is None.
+    name_override (str): An optional name override for the campsite. Default is None.</p>
 </div>
 
 
@@ -362,17 +356,11 @@
     
             <div class="docstring"><p>Check the availability of Parks Canada campsites within the given date range.</p>
 
-<h6 id="arguments">Arguments:</h6>
+<p>Args:
+    date_range (DateRangeRequest): The date range for which campsites are to be checked.</p>
 
-<ul>
-<li><strong>date_range (DateRangeRequest):</strong>  The date range for which campsites are to be checked.</li>
-</ul>
-
-<h6 id="returns">Returns:</h6>
-
-<blockquote>
-  <p>ParksCanadaResponse: The response containing available campsites.</p>
-</blockquote>
+<p>Returns:
+    ParksCanadaResponse: The response containing available campsites.</p>
 </div>
 
 
@@ -390,17 +378,11 @@
     
             <div class="docstring"><p>Format the date in the required string format.</p>
 
-<h6 id="arguments">Arguments:</h6>
+<p>Args:
+    date (dt.datetime): The date to be formatted.</p>
 
-<ul>
-<li><strong>date (dt.datetime):</strong>  The date to be formatted.</li>
-</ul>
-
-<h6 id="returns">Returns:</h6>
-
-<blockquote>
-  <p>str: The formatted date string.</p>
-</blockquote>
+<p>Returns:
+    str: The formatted date string.</p>
 </div>
 
 

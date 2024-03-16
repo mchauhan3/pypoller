@@ -46,6 +46,6 @@ For playwrigt (US Visa):
 ## Usage
 Refer to examples to learn how to use the library.
 
-To provide twilio credentials for twilio, create a `.env` file by copying the `.env.sample` file, and replace the placeholder twilio parameters to enable notifications via SMS.
+To provide twilio credentials for the examples, create a `.env` file by copying the `.env.sample` file, and replace the placeholder twilio parameters to enable notifications via SMS.
 
 If twilio credentials are not provided, notifications will be printed to console.

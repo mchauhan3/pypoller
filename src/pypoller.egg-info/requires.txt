@@ -1,5 +1,0 @@
-requests
-playwright
-twilio
-typing_extensions
-python-dotenv

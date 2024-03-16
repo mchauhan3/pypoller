@@ -5,8 +5,6 @@ from pypoller.poller import Poller
 from pypoller.resource import ParksCanadaChecker
 from pypoller.resource.request import DateRangeRequest
 from util.constants import (
-    GREEN_POINT_DRIVE_IN_CAMPSITES_ID,
-    GREEN_POINT_WALK_IN_CAMPSITES_ID,
     TWILIO_AUTH_TOKEN_KEY,
     TWILIO_PHONE_NUMBER_KEY,
     TWILIO_ACCOUNT_SID_KEY,
@@ -42,6 +40,9 @@ except Exception as e:
 EQUIPMENT_CATEGORY_ID = "-32768"
 SUB_EQUIPMENT_CATEGORY_ID = "-32767"
 PARKS_CANADA_ACCOMMODATION_BOOKING_ID = "1"
+GREEN_POINT_DRIVE_IN_CAMPSITES_ID = "-2147483314"
+GREEN_POINT_WALK_IN_CAMPSITES_ID = "-2147483313"
+
 
 # Initialize ParksCanadaChecker instances for drive-in and otentik campsites
 drive_in_availability_checker = ParksCanadaChecker(
