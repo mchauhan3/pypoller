@@ -26,9 +26,9 @@ try:
 	twilio_phone_number = os.getenv(TWILIO_PHONE_NUMBER_KEY)
 
 	notifier = TwilioSMSNotifier(twilio_account_sid, twilio_auth_token, twilio_phone_number)
-except ValueError as e:
+except Exception as e:
 	print(e)
-	print("Twilio arguments not provided, using console notifier")
+	print("Could not initialize Twilio Client, using ConsoleNotifier")
 	notifier = ConsoleNotifier()
 
 def configure_contacts():

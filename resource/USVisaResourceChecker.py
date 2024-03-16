@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from playwright.sync_api import sync_playwright, Playwright, expect
-import time
 from . import ResourceChecker
 from .request import DateRangeRequest
 from .response import Response
@@ -12,7 +11,7 @@ import json
 
 JS_SCRIPT = ("() => {"
 			"var req = new XMLHttpRequest();"
-			 f"req.open('GET', '%s', false);"
+			 "req.open('GET', '%s', false);"
 			 "req.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');"
 			 "req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');"
 			 "req.send(null);"
@@ -24,7 +23,6 @@ DATE_FORMAT = "%Y-%m-%d"
 @dataclass
 class USVisaResponse(Response):
 	available_dates: List[str] = field(default_factory=lambda: [])
-	name_override: str = None
 
 	def to_message(self) -> Message:
 		if self.error:
@@ -32,8 +30,6 @@ class USVisaResponse(Response):
 
 		if not self.available_dates:
 			return Message()
-
-		values = self.name_override if self.name_override else self.available_dates
 
 		message_body = (
 			f'Found dates for US Visa: {[d.strftime(DATE_FORMAT) for d in self.available_dates]}')
@@ -76,8 +72,8 @@ class USVisaResourceChecker(ResourceChecker):
 		with sync_playwright() as playwright:
 			try:
 				run(playwright)
-			except:
-				return USVisaResponse(available_dates=available_dates, is_error=True)
+			except Exception as e:
+				return USVisaResponse(error=e)
 
 		return USVisaResponse(available_dates=available_dates)
 

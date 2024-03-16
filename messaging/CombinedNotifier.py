@@ -15,7 +15,7 @@ class CombinedNotifier(Notifier):
 
 	def add_contact(self, contact: Contact):
 		for notifier in self.notifiers:
-			notifier.add_contact(contacts)
+			notifier.add_contact(contact)
 
 	def add_contacts(self, contacts: Iterable[Contact]):
 		for notifier in self.notifiers:
