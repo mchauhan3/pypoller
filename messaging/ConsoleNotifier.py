@@ -2,5 +2,16 @@ from messaging import Notifier, Message
 
 
 class ConsoleNotifier(Notifier):
-	def notify_inner(self, msg: Message):
-		print(msg.body)
+    """
+    Notifier class for printing messages to the console.
+
+    """
+
+    def notify_inner(self, msg: Message):
+        """
+        Print the message body to the console.
+
+        Args:
+            msg (Message): The message to be printed.
+        """
+        print(msg.body)

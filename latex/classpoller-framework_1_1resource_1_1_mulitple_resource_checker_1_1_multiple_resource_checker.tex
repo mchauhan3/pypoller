@@ -1,0 +1,95 @@
+\doxysection{Multiple\+Resource\+Checker Class Reference}
+\hypertarget{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker}{}\label{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker}\index{MultipleResourceChecker@{MultipleResourceChecker}}
+Inheritance diagram for Multiple\+Resource\+Checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_ad2c39b33a7ac3f855e1eda95589b24a7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, list \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a742efdb11468c670722428f41e200670}{checkers}})
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}{Response}} \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_ae446f3f0a7c1b548c33a4f51a2ba8898}{check\+\_\+resource}} (self, \mbox{\hyperlink{classpoller-framework_1_1resource_1_1request_1_1_request_1_1_request}{Request}} request)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a5851436f4e012e6c18660c3326e3ae7d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a742efdb11468c670722428f41e200670}{checkers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A resource checker that aggregates multiple resource checkers.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_ad2c39b33a7ac3f855e1eda95589b24a7}\label{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_ad2c39b33a7ac3f855e1eda95589b24a7} 
+\index{MultipleResourceChecker@{MultipleResourceChecker}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!MultipleResourceChecker@{MultipleResourceChecker}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{list}]{checkers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the MultipleResourceChecker.
+
+Args:
+    checkers (list): List of ResourceChecker instances to be aggregated.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a5851436f4e012e6c18660c3326e3ae7d}\label{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a5851436f4e012e6c18660c3326e3ae7d} 
+\index{MultipleResourceChecker@{MultipleResourceChecker}!\_\_add\_\_@{\_\_add\_\_}}
+\index{\_\_add\_\_@{\_\_add\_\_}!MultipleResourceChecker@{MultipleResourceChecker}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Override the addition operator to combine MultipleResourceCheckers.
+
+Args:
+    other (MultipleResourceChecker or ResourceChecker): Another MultipleResourceChecker or ResourceChecker
+        instance to be combined.
+
+Returns:
+    MultipleResourceChecker: A new MultipleResourceChecker instance containing the combined checkers.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_a5851436f4e012e6c18660c3326e3ae7d}{Resource\+Checker}}.
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_ae446f3f0a7c1b548c33a4f51a2ba8898}\label{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_ae446f3f0a7c1b548c33a4f51a2ba8898} 
+\index{MultipleResourceChecker@{MultipleResourceChecker}!check\_resource@{check\_resource}}
+\index{check\_resource@{check\_resource}!MultipleResourceChecker@{MultipleResourceChecker}}
+\doxysubsubsection{\texorpdfstring{check\_resource()}{check\_resource()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}{Response}} check\+\_\+resource (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpoller-framework_1_1resource_1_1request_1_1_request_1_1_request}{Request}}}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check the resource using all aggregated resource checkers.
+
+Args:
+    request (Request): The request to be checked.
+
+Returns:
+    Response: The aggregated response from all resource checkers.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_ae446f3f0a7c1b548c33a4f51a2ba8898}{Resource\+Checker}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a742efdb11468c670722428f41e200670}\label{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a742efdb11468c670722428f41e200670} 
+\index{MultipleResourceChecker@{MultipleResourceChecker}!checkers@{checkers}}
+\index{checkers@{checkers}!MultipleResourceChecker@{MultipleResourceChecker}}
+\doxysubsubsection{\texorpdfstring{checkers}{checkers}}
+{\footnotesize\ttfamily checkers}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+resource/\mbox{\hyperlink{_mulitple_resource_checker_8py}{Mulitple\+Resource\+Checker.\+py}}\end{DoxyCompactItemize}

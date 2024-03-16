@@ -1,0 +1,80 @@
+\doxysection{Combined\+Response Class Reference}
+\hypertarget{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response}{}\label{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response}\index{CombinedResponse@{CombinedResponse}}
+Inheritance diagram for Combined\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_message_1_1_message}{Message}} \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a6c353c71cd3424957baeee09a16cb3ac}{to\+\_\+message}} (self)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a5851436f4e012e6c18660c3326e3ae7d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a0da42d526a7afe555c3381539bb54c66}{underlying\+\_\+responses}} \mbox{[}\mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}{Response}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}{Response}}}
+\begin{DoxyCompactItemize}
+\item 
+Exception \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_ae57fb563c19f08105b696c8f4c84c583}{error}} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A response class representing a combination of multiple responses.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a5851436f4e012e6c18660c3326e3ae7d}\label{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a5851436f4e012e6c18660c3326e3ae7d} 
+\index{CombinedResponse@{CombinedResponse}!\_\_add\_\_@{\_\_add\_\_}}
+\index{\_\_add\_\_@{\_\_add\_\_}!CombinedResponse@{CombinedResponse}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Override the addition operator to combine CombinedResponses.
+
+Args:
+    other: Another CombinedResponse instance or Response instance to be combined.
+
+Returns:
+    CombinedResponse: A new CombinedResponse instance containing the combined responses.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a5851436f4e012e6c18660c3326e3ae7d}{Response}}.
+
+\Hypertarget{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a6c353c71cd3424957baeee09a16cb3ac}\label{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a6c353c71cd3424957baeee09a16cb3ac} 
+\index{CombinedResponse@{CombinedResponse}!to\_message@{to\_message}}
+\index{to\_message@{to\_message}!CombinedResponse@{CombinedResponse}}
+\doxysubsubsection{\texorpdfstring{to\_message()}{to\_message()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_message_1_1_message}{Message}} to\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert the combined response to a message format.
+
+Returns:
+    Message: The message containing the combined response body.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a6c353c71cd3424957baeee09a16cb3ac}{Response}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a0da42d526a7afe555c3381539bb54c66}\label{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a0da42d526a7afe555c3381539bb54c66} 
+\index{CombinedResponse@{CombinedResponse}!underlying\_responses@{underlying\_responses}}
+\index{underlying\_responses@{underlying\_responses}!CombinedResponse@{CombinedResponse}}
+\doxysubsubsection{\texorpdfstring{underlying\_responses}{underlying\_responses}}
+{\footnotesize\ttfamily List underlying\+\_\+responses \mbox{[}\mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}{Response}}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+resource/response/\mbox{\hyperlink{_combined_response_8py}{Combined\+Response.\+py}}\end{DoxyCompactItemize}

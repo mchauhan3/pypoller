@@ -1,0 +1,128 @@
+\doxysection{Twilio\+SMSNotifier Class Reference}
+\hypertarget{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier}{}\label{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier}\index{TwilioSMSNotifier@{TwilioSMSNotifier}}
+Inheritance diagram for Twilio\+SMSNotifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a4ac38972e8d00b6828a98df4f3595538}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str account\+\_\+sid, str auth\+\_\+token, str \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a3fff30efded6630471c4d6f23cecc925}{phone\+\_\+number}}, List\mbox{[}\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_contact_1_1_contact}{Contact}}\mbox{]} \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_aecae1b3d204131340fa4178645a7cf4a}{contacts}}=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}{notify\+\_\+inner}} (self, \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_message_1_1_message}{Message}} msg)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a9c90515f1b751160a2a38f8e51834b1b}{send\+\_\+message}} (self, message\+\_\+body, \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a3fff30efded6630471c4d6f23cecc925}{phone\+\_\+number}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier}{Notifier}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a536554e9a27e5d57334999aa1d58bf42}{notify}} (self, Message msg)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a5851436f4e012e6c18660c3326e3ae7d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a14e6fc31bd79dfeec8c6d886e7f6df8e}{add\+\_\+contact}} (self, Contact contact)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_ae9b01f32ef036ebc5bd46e8b5cc65ed4}{add\+\_\+contacts}} (self, Iterable\mbox{[}Contact\mbox{]} \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_aecae1b3d204131340fa4178645a7cf4a}{contacts}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_ad5bc32b75da65fe60067f501a4bb6665}{client}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a3fff30efded6630471c4d6f23cecc925}{phone\+\_\+number}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_aecae1b3d204131340fa4178645a7cf4a}{contacts}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier}{Notifier}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_aecae1b3d204131340fa4178645a7cf4a}{contacts}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a8be027e92ffe21dcfaac8debe0df5d2a}{notify}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Notifier class for sending SMS messages via Twilio.
+
+Uses Twilio's REST API to send SMS messages to contacts.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a4ac38972e8d00b6828a98df4f3595538}\label{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a4ac38972e8d00b6828a98df4f3595538} 
+\index{TwilioSMSNotifier@{TwilioSMSNotifier}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!TwilioSMSNotifier@{TwilioSMSNotifier}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{account\+\_\+sid,  }\item[{str}]{auth\+\_\+token,  }\item[{str}]{phone\+\_\+number,  }\item[{List\mbox{[}\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_contact_1_1_contact}{Contact}}\mbox{]} }]{contacts = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the TwilioSMSNotifier.
+
+Args:
+    account_sid (str): Twilio account SID.
+    auth_token (str): Twilio authentication token.
+    phone_number (str): Twilio phone number used for sending messages.
+    contacts (List[Contact], optional): List of contacts to be notified. Defaults to an empty list.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a39fab62c936174ae8a8499da8aa253fd}{Notifier}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}\label{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed} 
+\index{TwilioSMSNotifier@{TwilioSMSNotifier}!notify\_inner@{notify\_inner}}
+\index{notify\_inner@{notify\_inner}!TwilioSMSNotifier@{TwilioSMSNotifier}}
+\doxysubsubsection{\texorpdfstring{notify\_inner()}{notify\_inner()}}
+{\footnotesize\ttfamily notify\+\_\+inner (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_message_1_1_message}{Message}}}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Notify the contacts with the given message via SMS.
+
+Args:
+    msg (Message): The message to be sent.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}{Notifier}}.
+
+\Hypertarget{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a9c90515f1b751160a2a38f8e51834b1b}\label{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a9c90515f1b751160a2a38f8e51834b1b} 
+\index{TwilioSMSNotifier@{TwilioSMSNotifier}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!TwilioSMSNotifier@{TwilioSMSNotifier}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily send\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message\+\_\+body,  }\item[{}]{phone\+\_\+number }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Send an SMS message using Twilio's REST API.
+
+Args:
+    message_body (str): The body of the message.
+    phone_number (str): The phone number of the recipient.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_ad5bc32b75da65fe60067f501a4bb6665}\label{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_ad5bc32b75da65fe60067f501a4bb6665} 
+\index{TwilioSMSNotifier@{TwilioSMSNotifier}!client@{client}}
+\index{client@{client}!TwilioSMSNotifier@{TwilioSMSNotifier}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily client}
+
+\Hypertarget{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_aecae1b3d204131340fa4178645a7cf4a}\label{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_aecae1b3d204131340fa4178645a7cf4a} 
+\index{TwilioSMSNotifier@{TwilioSMSNotifier}!contacts@{contacts}}
+\index{contacts@{contacts}!TwilioSMSNotifier@{TwilioSMSNotifier}}
+\doxysubsubsection{\texorpdfstring{contacts}{contacts}}
+{\footnotesize\ttfamily contacts}
+
+\Hypertarget{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a3fff30efded6630471c4d6f23cecc925}\label{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a3fff30efded6630471c4d6f23cecc925} 
+\index{TwilioSMSNotifier@{TwilioSMSNotifier}!phone\_number@{phone\_number}}
+\index{phone\_number@{phone\_number}!TwilioSMSNotifier@{TwilioSMSNotifier}}
+\doxysubsubsection{\texorpdfstring{phone\_number}{phone\_number}}
+{\footnotesize\ttfamily phone\+\_\+number}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+messaging/\mbox{\hyperlink{_twilio_s_m_s_notifier_8py}{Twilio\+SMSNotifier.\+py}}\end{DoxyCompactItemize}

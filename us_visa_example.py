@@ -5,7 +5,10 @@ from messaging import Contact, TwilioSMSNotifier, ConsoleNotifier, TryNextOnFail
 import datetime as dt
 from dotenv import load_dotenv
 from util.constants import (
-	TWILIO_AUTH_TOKEN_KEY, TWILIO_PHONE_NUMBER_KEY, TWILIO_ACCOUNT_SID_KEY)
+    TWILIO_AUTH_TOKEN_KEY,
+    TWILIO_PHONE_NUMBER_KEY,
+    TWILIO_ACCOUNT_SID_KEY,
+)
 import os
 
 # change for your use
@@ -15,44 +18,61 @@ FACILITY_ID = "106"
 USER_EMAIL = "user_email"
 PASSWORD = "password"
 
-availability_checker = USVisaResourceChecker(UGANDA_EMBASSY, SCHEDULE_ID, FACILITY_ID, USER_EMAIL, PASSWORD)
+# Initialize resource checker for US Visa availability
+availability_checker = USVisaResourceChecker(
+    UGANDA_EMBASSY, SCHEDULE_ID, FACILITY_ID, USER_EMAIL, PASSWORD
+)
 
+# Load Twilio credentials from environment variables
 load_dotenv()
 notifier = None
 
 try:
-	twilio_account_sid = os.getenv(TWILIO_ACCOUNT_SID_KEY)
-	twilio_auth_token = os.getenv(TWILIO_AUTH_TOKEN_KEY)
-	twilio_phone_number = os.getenv(TWILIO_PHONE_NUMBER_KEY)
+    # Attempt to initialize Twilio notifier
+    twilio_account_sid = os.getenv(TWILIO_ACCOUNT_SID_KEY)
+    twilio_auth_token = os.getenv(TWILIO_AUTH_TOKEN_KEY)
+    twilio_phone_number = os.getenv(TWILIO_PHONE_NUMBER_KEY)
 
-	notifier = TwilioSMSNotifier(twilio_account_sid, twilio_auth_token, twilio_phone_number)
+    notifier = TwilioSMSNotifier(
+        twilio_account_sid, twilio_auth_token, twilio_phone_number
+    )
 except Exception as e:
-	print(e)
-	print("Could not initialize Twilio Client, using ConsoleNotifier")
-	notifier = ConsoleNotifier()
+    # If Twilio initialization fails, fall back to using ConsoleNotifier
+    print(e)
+    print("Could not initialize Twilio Client, using ConsoleNotifier")
+    notifier = ConsoleNotifier()
+
 
 def configure_contacts():
-	contacts = []
-	add_contact = input("Add contact? Y/N \n")
-	while add_contact == "Y":
-		name = input("Contact name? \n")
-		phone_number = input("Phone number? \n")
-		email = input("Email?")
-		notify_error = input("Should be notified on errors? Y/N \n") == "Y"
-		contacts.append(Contact(name, phone_number, email, notify_error))
-		print("Added contact!")
-		add_contact = input("Add another contact? Y/N \n")
-		contacts.append(add_contact)
-	return contacts
+    contacts = []
+    add_contact = input("Add contact? Y/N \n")
+    while add_contact == "Y":
+        # Collect contact information from user input
+        name = input("Contact name? \n")
+        phone_number = input("Phone number? \n")
+        email = input("Email?")
+        notify_error = input("Should be notified on errors? Y/N \n") == "Y"
+        # Create Contact object and append to contacts list
+        contacts.append(Contact(name, phone_number, email, notify_error))
+        print("Added contact!")
+        # Prompt user to add another contact
+        add_contact = input("Add another contact? Y/N \n")
+    return contacts
+
 
 if not (isinstance(notifier, ConsoleNotifier)):
-	notifier.add_contacts(configure_contacts())
-	notifier = TryNextOnFailNotifier([notifier, ConsoleNotifier()])
+    # If notifier is not ConsoleNotifier, configure contacts and use TryNextOnFailNotifier
+    notifier.add_contacts(configure_contacts())
+    notifier = TryNextOnFailNotifier([notifier, ConsoleNotifier()])
 
+# Initialize Poller with resource checker and notifier
 poller = Poller(availability_checker, notifier)
 
+# Define date range for polling
 date_range_request = DateRangeRequest(
-	start_date=dt.datetime(2024, 3, 14),
-	end_date=dt.datetime(2024, 7, 1),
+    start_date=dt.datetime(2024, 3, 14),
+    end_date=dt.datetime(2025, 7, 1),
 )
+
+# Start polling with specified frequency
 poller.poll(date_range_request, 300)

@@ -1,0 +1,144 @@
+\doxysection{poller-\/framework.canada\+\_\+parks\+\_\+example Namespace Reference}
+\hypertarget{namespacepoller-framework_1_1canada__parks__example}{}\label{namespacepoller-framework_1_1canada__parks__example}\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a7c53ac0be7f9d30a14270855dd87eac6}{configure\+\_\+contacts}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_aa246fb2672ea0ebb4ab55982bfd989b9}{notifier}} = None
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a976317ee52b3df313ad2d1a5b1b6c0b4}{twilio\+\_\+account\+\_\+sid}} = os.\+getenv(TWILIO\+\_\+\+ACCOUNT\+\_\+\+SID\+\_\+\+KEY)
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a3f7451db7ecad6c08a55f1d9bb4a9265}{twilio\+\_\+auth\+\_\+token}} = os.\+getenv(TWILIO\+\_\+\+AUTH\+\_\+\+TOKEN\+\_\+\+KEY)
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_abc5b0e381683bd8edc8695912469b487}{twilio\+\_\+phone\+\_\+number}} = os.\+getenv(TWILIO\+\_\+\+PHONE\+\_\+\+NUMBER\+\_\+\+KEY)
+\item 
+str \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a101557e5faf80aed1ece0dd71469b0f1}{EQUIPMENT\+\_\+\+CATEGORY\+\_\+\+ID}} = "{}-\/32768"{}
+\item 
+str \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a63569f2e8e00bd95e1b093427ae08e12}{SUB\+\_\+\+EQUIPMENT\+\_\+\+CATEGORY\+\_\+\+ID}} = "{}-\/32767"{}
+\item 
+str \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_acca557af563d41c35e8e19354100520d}{PARKS\+\_\+\+CANADA\+\_\+\+ACCOMMODATION\+\_\+\+BOOKING\+\_\+\+ID}} = "{}1"{}
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_aa1be1f1e50f2694b187c2fe508a052e6}{drive\+\_\+in\+\_\+availability\+\_\+checker}}
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a9673acb832f41f8ad14a7c8dc6f93e1c}{otentik\+\_\+availability\+\_\+checker}}
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a4b41f069bd13d08e4ec89b12b8abec4f}{availability\+\_\+checker}} = \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_aa1be1f1e50f2694b187c2fe508a052e6}{drive\+\_\+in\+\_\+availability\+\_\+checker}} + \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a9673acb832f41f8ad14a7c8dc6f93e1c}{otentik\+\_\+availability\+\_\+checker}}
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a415ff003456284c57692b0d5f491eac2}{poller}} = \mbox{\hyperlink{classpoller-framework_1_1poller_1_1_poller_1_1_poller}{Poller}}(\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a4b41f069bd13d08e4ec89b12b8abec4f}{availability\+\_\+checker}}, \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_aa246fb2672ea0ebb4ab55982bfd989b9}{notifier}})
+\item 
+\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a5231221c2511051a4d2a66c4a032d8c7}{date\+\_\+range\+\_\+request}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a7c53ac0be7f9d30a14270855dd87eac6}\label{namespacepoller-framework_1_1canada__parks__example_a7c53ac0be7f9d30a14270855dd87eac6} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!configure\_contacts@{configure\_contacts}}
+\index{configure\_contacts@{configure\_contacts}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{configure\_contacts()}{configure\_contacts()}}
+{\footnotesize\ttfamily configure\+\_\+contacts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a4b41f069bd13d08e4ec89b12b8abec4f}\label{namespacepoller-framework_1_1canada__parks__example_a4b41f069bd13d08e4ec89b12b8abec4f} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!availability\_checker@{availability\_checker}}
+\index{availability\_checker@{availability\_checker}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{availability\_checker}{availability\_checker}}
+{\footnotesize\ttfamily availability\+\_\+checker = \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_aa1be1f1e50f2694b187c2fe508a052e6}{drive\+\_\+in\+\_\+availability\+\_\+checker}} + \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a9673acb832f41f8ad14a7c8dc6f93e1c}{otentik\+\_\+availability\+\_\+checker}}}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a5231221c2511051a4d2a66c4a032d8c7}\label{namespacepoller-framework_1_1canada__parks__example_a5231221c2511051a4d2a66c4a032d8c7} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!date\_range\_request@{date\_range\_request}}
+\index{date\_range\_request@{date\_range\_request}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{date\_range\_request}{date\_range\_request}}
+{\footnotesize\ttfamily date\+\_\+range\+\_\+request}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ DateRangeRequest(}
+\DoxyCodeLine{00002\ \ \ \ \ start\_date=dt.datetime(2024,\ 8,\ 1),}
+\DoxyCodeLine{00003\ \ \ \ \ end\_date=dt.datetime(2024,\ 8,\ 5),}
+\DoxyCodeLine{00004\ )}
+
+\end{DoxyCode}
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_aa1be1f1e50f2694b187c2fe508a052e6}\label{namespacepoller-framework_1_1canada__parks__example_aa1be1f1e50f2694b187c2fe508a052e6} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!drive\_in\_availability\_checker@{drive\_in\_availability\_checker}}
+\index{drive\_in\_availability\_checker@{drive\_in\_availability\_checker}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{drive\_in\_availability\_checker}{drive\_in\_availability\_checker}}
+{\footnotesize\ttfamily drive\+\_\+in\+\_\+availability\+\_\+checker}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ ParksCanadaChecker(}
+\DoxyCodeLine{00002\ \ \ \ \ resource\_id=GREEN\_POINT\_DRIVE\_IN\_CAMPSITES\_ID,}
+\DoxyCodeLine{00003\ \ \ \ \ equipment\_category\_id=EQUIPMENT\_CATEGORY\_ID,}
+\DoxyCodeLine{00004\ \ \ \ \ sub\_equipment\_category\_id=SUB\_EQUIPMENT\_CATEGORY\_ID,}
+\DoxyCodeLine{00005\ )}
+
+\end{DoxyCode}
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a101557e5faf80aed1ece0dd71469b0f1}\label{namespacepoller-framework_1_1canada__parks__example_a101557e5faf80aed1ece0dd71469b0f1} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!EQUIPMENT\_CATEGORY\_ID@{EQUIPMENT\_CATEGORY\_ID}}
+\index{EQUIPMENT\_CATEGORY\_ID@{EQUIPMENT\_CATEGORY\_ID}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{EQUIPMENT\_CATEGORY\_ID}{EQUIPMENT\_CATEGORY\_ID}}
+{\footnotesize\ttfamily str EQUIPMENT\+\_\+\+CATEGORY\+\_\+\+ID = "{}-\/32768"{}}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_aa246fb2672ea0ebb4ab55982bfd989b9}\label{namespacepoller-framework_1_1canada__parks__example_aa246fb2672ea0ebb4ab55982bfd989b9} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!notifier@{notifier}}
+\index{notifier@{notifier}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{notifier}{notifier}}
+{\footnotesize\ttfamily notifier = None}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a9673acb832f41f8ad14a7c8dc6f93e1c}\label{namespacepoller-framework_1_1canada__parks__example_a9673acb832f41f8ad14a7c8dc6f93e1c} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!otentik\_availability\_checker@{otentik\_availability\_checker}}
+\index{otentik\_availability\_checker@{otentik\_availability\_checker}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{otentik\_availability\_checker}{otentik\_availability\_checker}}
+{\footnotesize\ttfamily otentik\+\_\+availability\+\_\+checker}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ ParksCanadaChecker(}
+\DoxyCodeLine{00002\ \ \ \ \ resource\_id=GREEN\_POINT\_WALK\_IN\_CAMPSITES\_ID,}
+\DoxyCodeLine{00003\ \ \ \ \ booking\_category\_id=PARKS\_CANADA\_ACCOMMODATION\_BOOKING\_ID,}
+\DoxyCodeLine{00004\ \ \ \ \ name\_override=\textcolor{stringliteral}{"{}Otentik"{}},}
+\DoxyCodeLine{00005\ )}
+
+\end{DoxyCode}
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_acca557af563d41c35e8e19354100520d}\label{namespacepoller-framework_1_1canada__parks__example_acca557af563d41c35e8e19354100520d} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!PARKS\_CANADA\_ACCOMMODATION\_BOOKING\_ID@{PARKS\_CANADA\_ACCOMMODATION\_BOOKING\_ID}}
+\index{PARKS\_CANADA\_ACCOMMODATION\_BOOKING\_ID@{PARKS\_CANADA\_ACCOMMODATION\_BOOKING\_ID}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{PARKS\_CANADA\_ACCOMMODATION\_BOOKING\_ID}{PARKS\_CANADA\_ACCOMMODATION\_BOOKING\_ID}}
+{\footnotesize\ttfamily str PARKS\+\_\+\+CANADA\+\_\+\+ACCOMMODATION\+\_\+\+BOOKING\+\_\+\+ID = "{}1"{}}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a415ff003456284c57692b0d5f491eac2}\label{namespacepoller-framework_1_1canada__parks__example_a415ff003456284c57692b0d5f491eac2} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!poller@{poller}}
+\index{poller@{poller}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{poller}{poller}}
+{\footnotesize\ttfamily poller = \mbox{\hyperlink{classpoller-framework_1_1poller_1_1_poller_1_1_poller}{Poller}}(\mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_a4b41f069bd13d08e4ec89b12b8abec4f}{availability\+\_\+checker}}, \mbox{\hyperlink{namespacepoller-framework_1_1canada__parks__example_aa246fb2672ea0ebb4ab55982bfd989b9}{notifier}})}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a63569f2e8e00bd95e1b093427ae08e12}\label{namespacepoller-framework_1_1canada__parks__example_a63569f2e8e00bd95e1b093427ae08e12} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!SUB\_EQUIPMENT\_CATEGORY\_ID@{SUB\_EQUIPMENT\_CATEGORY\_ID}}
+\index{SUB\_EQUIPMENT\_CATEGORY\_ID@{SUB\_EQUIPMENT\_CATEGORY\_ID}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{SUB\_EQUIPMENT\_CATEGORY\_ID}{SUB\_EQUIPMENT\_CATEGORY\_ID}}
+{\footnotesize\ttfamily str SUB\+\_\+\+EQUIPMENT\+\_\+\+CATEGORY\+\_\+\+ID = "{}-\/32767"{}}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a976317ee52b3df313ad2d1a5b1b6c0b4}\label{namespacepoller-framework_1_1canada__parks__example_a976317ee52b3df313ad2d1a5b1b6c0b4} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!twilio\_account\_sid@{twilio\_account\_sid}}
+\index{twilio\_account\_sid@{twilio\_account\_sid}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{twilio\_account\_sid}{twilio\_account\_sid}}
+{\footnotesize\ttfamily twilio\+\_\+account\+\_\+sid = os.\+getenv(TWILIO\+\_\+\+ACCOUNT\+\_\+\+SID\+\_\+\+KEY)}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_a3f7451db7ecad6c08a55f1d9bb4a9265}\label{namespacepoller-framework_1_1canada__parks__example_a3f7451db7ecad6c08a55f1d9bb4a9265} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!twilio\_auth\_token@{twilio\_auth\_token}}
+\index{twilio\_auth\_token@{twilio\_auth\_token}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{twilio\_auth\_token}{twilio\_auth\_token}}
+{\footnotesize\ttfamily twilio\+\_\+auth\+\_\+token = os.\+getenv(TWILIO\+\_\+\+AUTH\+\_\+\+TOKEN\+\_\+\+KEY)}
+
+\Hypertarget{namespacepoller-framework_1_1canada__parks__example_abc5b0e381683bd8edc8695912469b487}\label{namespacepoller-framework_1_1canada__parks__example_abc5b0e381683bd8edc8695912469b487} 
+\index{poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}!twilio\_phone\_number@{twilio\_phone\_number}}
+\index{twilio\_phone\_number@{twilio\_phone\_number}!poller-\/framework.canada\_parks\_example@{poller-\/framework.canada\_parks\_example}}
+\doxysubsubsection{\texorpdfstring{twilio\_phone\_number}{twilio\_phone\_number}}
+{\footnotesize\ttfamily twilio\+\_\+phone\+\_\+number = os.\+getenv(TWILIO\+\_\+\+PHONE\+\_\+\+NUMBER\+\_\+\+KEY)}
+

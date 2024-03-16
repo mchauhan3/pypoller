@@ -1,0 +1,134 @@
+\doxysection{Parks\+Canada\+Checker Class Reference}
+\hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker}{}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker}\index{ParksCanadaChecker@{ParksCanadaChecker}}
+Inheritance diagram for Parks\+Canada\+Checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_aa21962b8bab7f532182936b5a3350356}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a0943cc2dbcd189de4fc3eb56996296ef}{resource\+\_\+id}}, str \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a517c655b03f457e25564f1c2843eaa7f}{booking\+\_\+category\+\_\+id}}=\mbox{\hyperlink{namespacepoller-framework_1_1resource_1_1_parks_canada_checker_a0ae13e395cb16e8fd979c3d029678a97}{DEFAULT\+\_\+\+BOOKING\+\_\+\+CATEGORY\+\_\+\+ID}}, str \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a5ccd6b7e5855ef68d303da0151fa63ab}{equipment\+\_\+category\+\_\+id}}=None, str \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a3ba1775fff2b95faeec6c8c082f74905}{sub\+\_\+equipment\+\_\+category\+\_\+id}}=None, str \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a321953fd5e81e6c6f066e55333410348}{name\+\_\+override}}=None)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_response}{Parks\+Canada\+Response}} \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_ac02dcf9e8db94169d8f7aa5b47ad5123}{check\+\_\+resource}} (self, \mbox{\hyperlink{classpoller-framework_1_1resource_1_1request_1_1_date_range_request_1_1_date_range_request}{Date\+Range\+Request}} date\+\_\+range)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker}{Resource\+Checker}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_a5851436f4e012e6c18660c3326e3ae7d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a377e25107fb67e4b079a037c6cf6ccec}{format\+\_\+date}} (dt.\+datetime date)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a517c655b03f457e25564f1c2843eaa7f}{booking\+\_\+category\+\_\+id}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a3ba1775fff2b95faeec6c8c082f74905}{sub\+\_\+equipment\+\_\+category\+\_\+id}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a5ccd6b7e5855ef68d303da0151fa63ab}{equipment\+\_\+category\+\_\+id}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a0943cc2dbcd189de4fc3eb56996296ef}{resource\+\_\+id}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a321953fd5e81e6c6f066e55333410348}{name\+\_\+override}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Resource checker for Parks Canada campsite availability.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_aa21962b8bab7f532182936b5a3350356}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_aa21962b8bab7f532182936b5a3350356} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{resource\+\_\+id,  }\item[{str }]{booking\+\_\+category\+\_\+id = {\ttfamily \mbox{\hyperlink{namespacepoller-framework_1_1resource_1_1_parks_canada_checker_a0ae13e395cb16e8fd979c3d029678a97}{DEFAULT\+\_\+\+BOOKING\+\_\+\+CATEGORY\+\_\+\+ID}}},  }\item[{str }]{equipment\+\_\+category\+\_\+id = {\ttfamily None},  }\item[{str }]{sub\+\_\+equipment\+\_\+category\+\_\+id = {\ttfamily None},  }\item[{str }]{name\+\_\+override = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the Parks Canada campsite checker.
+
+Args:
+    resource_id (str): The ID of the resource.
+    booking_category_id (str): The booking category ID. Default is "0".
+    equipment_category_id (str): The equipment category ID. Default is None.
+    sub_equipment_category_id (str): The sub-equipment category ID. Default is None.
+    name_override (str): An optional name override for the campsite. Default is None.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_ac02dcf9e8db94169d8f7aa5b47ad5123}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_ac02dcf9e8db94169d8f7aa5b47ad5123} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!check\_resource@{check\_resource}}
+\index{check\_resource@{check\_resource}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{check\_resource()}{check\_resource()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_response}{Parks\+Canada\+Response}} check\+\_\+resource (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpoller-framework_1_1resource_1_1request_1_1_date_range_request_1_1_date_range_request}{Date\+Range\+Request}}}]{date\+\_\+range }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check the availability of Parks Canada campsites within the given date range.
+
+Args:
+    date_range (DateRangeRequest): The date range for which campsites are to be checked.
+
+Returns:
+    ParksCanadaResponse: The response containing available campsites.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_ae446f3f0a7c1b548c33a4f51a2ba8898}{Resource\+Checker}}.
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a377e25107fb67e4b079a037c6cf6ccec}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a377e25107fb67e4b079a037c6cf6ccec} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!format\_date@{format\_date}}
+\index{format\_date@{format\_date}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{format\_date()}{format\_date()}}
+{\footnotesize\ttfamily  str format\+\_\+date (\begin{DoxyParamCaption}\item[{dt.\+datetime}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Format the date in the required string format.
+
+Args:
+    date (dt.datetime): The date to be formatted.
+
+Returns:
+    str: The formatted date string.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a517c655b03f457e25564f1c2843eaa7f}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a517c655b03f457e25564f1c2843eaa7f} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!booking\_category\_id@{booking\_category\_id}}
+\index{booking\_category\_id@{booking\_category\_id}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{booking\_category\_id}{booking\_category\_id}}
+{\footnotesize\ttfamily booking\+\_\+category\+\_\+id}
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a5ccd6b7e5855ef68d303da0151fa63ab}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a5ccd6b7e5855ef68d303da0151fa63ab} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!equipment\_category\_id@{equipment\_category\_id}}
+\index{equipment\_category\_id@{equipment\_category\_id}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{equipment\_category\_id}{equipment\_category\_id}}
+{\footnotesize\ttfamily equipment\+\_\+category\+\_\+id}
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a321953fd5e81e6c6f066e55333410348}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a321953fd5e81e6c6f066e55333410348} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!name\_override@{name\_override}}
+\index{name\_override@{name\_override}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{name\_override}{name\_override}}
+{\footnotesize\ttfamily name\+\_\+override}
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a0943cc2dbcd189de4fc3eb56996296ef}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a0943cc2dbcd189de4fc3eb56996296ef} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!resource\_id@{resource\_id}}
+\index{resource\_id@{resource\_id}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{resource\_id}{resource\_id}}
+{\footnotesize\ttfamily resource\+\_\+id}
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a3ba1775fff2b95faeec6c8c082f74905}\label{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_a3ba1775fff2b95faeec6c8c082f74905} 
+\index{ParksCanadaChecker@{ParksCanadaChecker}!sub\_equipment\_category\_id@{sub\_equipment\_category\_id}}
+\index{sub\_equipment\_category\_id@{sub\_equipment\_category\_id}!ParksCanadaChecker@{ParksCanadaChecker}}
+\doxysubsubsection{\texorpdfstring{sub\_equipment\_category\_id}{sub\_equipment\_category\_id}}
+{\footnotesize\ttfamily sub\+\_\+equipment\+\_\+category\+\_\+id}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+resource/\mbox{\hyperlink{_parks_canada_checker_8py}{Parks\+Canada\+Checker.\+py}}\end{DoxyCompactItemize}
