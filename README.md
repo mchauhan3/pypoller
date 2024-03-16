@@ -1,10 +1,10 @@
-# poller-framework
+# pypoller
 
 ## Overview
 
-poller-framework is a lightweight and easy-to-use framework for polling a resource at regular intervals and providing notifications on any updates. It is designed to simplify the process of monitoring a remote service for changes and alerting users or systems when relevant updates occur.
+pypoller is a lightweight and easy-to-use framework for polling a resource at regular intervals and providing notifications on any updates. It is designed to simplify the process of monitoring a remote service for changes and alerting users or systems when relevant updates occur.
 
-Detailed docs available at https://www.mohitc.com/poller-framework/docs/
+Detailed docs available at https://www.mohitc.com/pypoller/docs/
 
 ## Features
 
