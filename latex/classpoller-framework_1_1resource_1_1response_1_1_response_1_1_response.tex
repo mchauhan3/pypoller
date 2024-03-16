@@ -1,0 +1,75 @@
+\doxysection{Response Class Reference}
+\hypertarget{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}{}\label{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}\index{Response@{Response}}
+Inheritance diagram for Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_message_1_1_message}{Message}} \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a6c353c71cd3424957baeee09a16cb3ac}{to\+\_\+message}} (self)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a5851436f4e012e6c18660c3326e3ae7d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Exception \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_ae57fb563c19f08105b696c8f4c84c583}{error}} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for representing a response.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a5851436f4e012e6c18660c3326e3ae7d}\label{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a5851436f4e012e6c18660c3326e3ae7d} 
+\index{Response@{Response}!\_\_add\_\_@{\_\_add\_\_}}
+\index{\_\_add\_\_@{\_\_add\_\_}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Override the addition operator to combine responses.
+
+Args:
+    other: Another Response instance to be combined.
+
+Returns:
+    CombinedResponse: A new CombinedResponse instance containing the combined responses.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a5851436f4e012e6c18660c3326e3ae7d}{Combined\+Response}}.
+
+\Hypertarget{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a6c353c71cd3424957baeee09a16cb3ac}\label{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_a6c353c71cd3424957baeee09a16cb3ac} 
+\index{Response@{Response}!to\_message@{to\_message}}
+\index{to\_message@{to\_message}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{to\_message()}{to\_message()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_message_1_1_message}{Message}} to\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert the response to a message format.
+
+Returns:
+    Message: The message containing the response body.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_response_a6c353c71cd3424957baeee09a16cb3ac}{Parks\+Canada\+Response}}, \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_combined_response_1_1_combined_response_a6c353c71cd3424957baeee09a16cb3ac}{Combined\+Response}}, and \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_response_a6c353c71cd3424957baeee09a16cb3ac}{USVisa\+Response}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_ae57fb563c19f08105b696c8f4c84c583}\label{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response_ae57fb563c19f08105b696c8f4c84c583} 
+\index{Response@{Response}!error@{error}}
+\index{error@{error}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily Exception error = None\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+resource/response/\mbox{\hyperlink{_response_8py}{Response.\+py}}\end{DoxyCompactItemize}

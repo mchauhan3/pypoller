@@ -1,2 +1,5 @@
 class Request:
-	pass
+    """
+    Base class for representing a request.
+    """
+    pass

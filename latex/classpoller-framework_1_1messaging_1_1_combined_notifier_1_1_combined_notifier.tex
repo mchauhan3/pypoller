@@ -1,0 +1,92 @@
+\doxysection{Combined\+Notifier Class Reference}
+\hypertarget{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier}{}\label{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier}\index{CombinedNotifier@{CombinedNotifier}}
+Inheritance diagram for Combined\+Notifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_ad20e71519d0a7572a981de75c14ac552}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a283e9fb4436b811ca2160ba225880b78}{notifiers}})
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}{notify\+\_\+inner}} (self, Message msg)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a14e6fc31bd79dfeec8c6d886e7f6df8e}{add\+\_\+contact}} (self, Contact contact)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_ae9b01f32ef036ebc5bd46e8b5cc65ed4}{add\+\_\+contacts}} (self, Iterable\mbox{[}Contact\mbox{]} contacts)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a283e9fb4436b811ca2160ba225880b78}{notifiers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Notifier class for combining multiple notifiers into one.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_ad20e71519d0a7572a981de75c14ac552}\label{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_ad20e71519d0a7572a981de75c14ac552} 
+\index{CombinedNotifier@{CombinedNotifier}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!CombinedNotifier@{CombinedNotifier}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{notifiers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the CombinedNotifier with a list of notifiers.
+
+Args:
+    notifiers: List of Notifier instances to be combined.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a14e6fc31bd79dfeec8c6d886e7f6df8e}\label{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a14e6fc31bd79dfeec8c6d886e7f6df8e} 
+\index{CombinedNotifier@{CombinedNotifier}!add\_contact@{add\_contact}}
+\index{add\_contact@{add\_contact}!CombinedNotifier@{CombinedNotifier}}
+\doxysubsubsection{\texorpdfstring{add\_contact()}{add\_contact()}}
+{\footnotesize\ttfamily add\+\_\+contact (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Contact}]{contact }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add a single contact to all combined notifiers.
+
+Args:
+    contact (Contact): The contact to be added.
+\end{DoxyVerb}
+ \Hypertarget{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_ae9b01f32ef036ebc5bd46e8b5cc65ed4}\label{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_ae9b01f32ef036ebc5bd46e8b5cc65ed4} 
+\index{CombinedNotifier@{CombinedNotifier}!add\_contacts@{add\_contacts}}
+\index{add\_contacts@{add\_contacts}!CombinedNotifier@{CombinedNotifier}}
+\doxysubsubsection{\texorpdfstring{add\_contacts()}{add\_contacts()}}
+{\footnotesize\ttfamily add\+\_\+contacts (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}Contact\mbox{]}}]{contacts }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add multiple contacts to all combined notifiers.
+
+Args:
+    contacts (Iterable[Contact]): The contacts to be added.
+\end{DoxyVerb}
+ \Hypertarget{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}\label{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed} 
+\index{CombinedNotifier@{CombinedNotifier}!notify\_inner@{notify\_inner}}
+\index{notify\_inner@{notify\_inner}!CombinedNotifier@{CombinedNotifier}}
+\doxysubsubsection{\texorpdfstring{notify\_inner()}{notify\_inner()}}
+{\footnotesize\ttfamily notify\+\_\+inner (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Message}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Notify the contacts with the given message using all combined notifiers.
+
+Args:
+    msg (Message): The message to be sent.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a283e9fb4436b811ca2160ba225880b78}\label{classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier_a283e9fb4436b811ca2160ba225880b78} 
+\index{CombinedNotifier@{CombinedNotifier}!notifiers@{notifiers}}
+\index{notifiers@{notifiers}!CombinedNotifier@{CombinedNotifier}}
+\doxysubsubsection{\texorpdfstring{notifiers}{notifiers}}
+{\footnotesize\ttfamily notifiers}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+messaging/\mbox{\hyperlink{_combined_notifier_8py}{Combined\+Notifier.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,138 @@
+\doxysection{Notifier Class Reference}
+\hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier}{}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier}\index{Notifier@{Notifier}}
+Inheritance diagram for Notifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a39fab62c936174ae8a8499da8aa253fd}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, List\mbox{[}Contact\mbox{]} \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_aecae1b3d204131340fa4178645a7cf4a}{contacts}}=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a536554e9a27e5d57334999aa1d58bf42}{notify}} (self, Message msg)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}{notify\+\_\+inner}} (self, Message msg)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a5851436f4e012e6c18660c3326e3ae7d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a14e6fc31bd79dfeec8c6d886e7f6df8e}{add\+\_\+contact}} (self, Contact contact)
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_ae9b01f32ef036ebc5bd46e8b5cc65ed4}{add\+\_\+contacts}} (self, Iterable\mbox{[}Contact\mbox{]} \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_aecae1b3d204131340fa4178645a7cf4a}{contacts}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_aecae1b3d204131340fa4178645a7cf4a}{contacts}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a8be027e92ffe21dcfaac8debe0df5d2a}{notify}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for notifying contacts with messages.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a39fab62c936174ae8a8499da8aa253fd}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a39fab62c936174ae8a8499da8aa253fd} 
+\index{Notifier@{Notifier}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{List\mbox{[}Contact\mbox{]} }]{contacts = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the Notifier with a list of contacts.
+
+Args:
+    contacts (List[Contact], optional): List of contacts to be notified. Defaults to an empty list.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a4ac38972e8d00b6828a98df4f3595538}{Twilio\+SMSNotifier}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a5851436f4e012e6c18660c3326e3ae7d}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a5851436f4e012e6c18660c3326e3ae7d} 
+\index{Notifier@{Notifier}!\_\_add\_\_@{\_\_add\_\_}}
+\index{\_\_add\_\_@{\_\_add\_\_}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Override the addition operator to combine Notifiers.
+
+Args:
+    other: Another Notifier instance to be combined.
+
+Returns:
+    CombinedNotifier: A new CombinedNotifier instance containing the combined Notifiers.
+\end{DoxyVerb}
+ \Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a14e6fc31bd79dfeec8c6d886e7f6df8e}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a14e6fc31bd79dfeec8c6d886e7f6df8e} 
+\index{Notifier@{Notifier}!add\_contact@{add\_contact}}
+\index{add\_contact@{add\_contact}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{add\_contact()}{add\_contact()}}
+{\footnotesize\ttfamily add\+\_\+contact (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Contact}]{contact }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add a single contact to the list of contacts.
+
+Args:
+    contact (Contact): The contact to be added.
+\end{DoxyVerb}
+ \Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_ae9b01f32ef036ebc5bd46e8b5cc65ed4}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_ae9b01f32ef036ebc5bd46e8b5cc65ed4} 
+\index{Notifier@{Notifier}!add\_contacts@{add\_contacts}}
+\index{add\_contacts@{add\_contacts}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{add\_contacts()}{add\_contacts()}}
+{\footnotesize\ttfamily add\+\_\+contacts (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}Contact\mbox{]}}]{contacts }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add multiple contacts to the list of contacts.
+
+Args:
+    contacts (Iterable[Contact]): The contacts to be added.
+\end{DoxyVerb}
+ \Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a536554e9a27e5d57334999aa1d58bf42}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a536554e9a27e5d57334999aa1d58bf42} 
+\index{Notifier@{Notifier}!notify@{notify}}
+\index{notify@{notify}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily notify (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Message}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Notify the contacts with the given message.
+
+Args:
+    msg (Message): The message to be sent.
+\end{DoxyVerb}
+ \Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed} 
+\index{Notifier@{Notifier}!notify\_inner@{notify\_inner}}
+\index{notify\_inner@{notify\_inner}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{notify\_inner()}{notify\_inner()}}
+{\footnotesize\ttfamily notify\+\_\+inner (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Message}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Abstract method to handle notification of a single message.
+
+Args:
+    msg (Message): The message to be sent.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_console_notifier_1_1_console_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}{Console\+Notifier}}, and \mbox{\hyperlink{classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier_a03c110f8cb3db34a3b8b7a9ac97a25ed}{Twilio\+SMSNotifier}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_aecae1b3d204131340fa4178645a7cf4a}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_aecae1b3d204131340fa4178645a7cf4a} 
+\index{Notifier@{Notifier}!contacts@{contacts}}
+\index{contacts@{contacts}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{contacts}{contacts}}
+{\footnotesize\ttfamily contacts}
+
+\Hypertarget{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a8be027e92ffe21dcfaac8debe0df5d2a}\label{classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier_a8be027e92ffe21dcfaac8debe0df5d2a} 
+\index{Notifier@{Notifier}!notify@{notify}}
+\index{notify@{notify}!Notifier@{Notifier}}
+\doxysubsubsection{\texorpdfstring{notify}{notify}}
+{\footnotesize\ttfamily notify}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+messaging/\mbox{\hyperlink{_notifier_8py}{Notifier.\+py}}\end{DoxyCompactItemize}

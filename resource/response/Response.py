@@ -1,15 +1,32 @@
 from dataclasses import dataclass
-
 from messaging import Message
-
 
 @dataclass(kw_only=True)
 class Response:
-	error: Exception = None
+    """
+    Base class for representing a response.
+    """
 
-	def to_message(self) -> Message:
-		raise NotImplementedError()
+    error: Exception = None
 
-	def __add__(self, other):
-		from .CombinedResponse import CombinedResponse
-		return CombinedResponse([self, other])
+    def to_message(self) -> Message:
+        """
+        Convert the response to a message format.
+
+        Returns:
+            Message: The message containing the response body.
+        """
+        raise NotImplementedError()
+
+    def __add__(self, other):
+        """
+        Override the addition operator to combine responses.
+
+        Args:
+            other: Another Response instance to be combined.
+
+        Returns:
+            CombinedResponse: A new CombinedResponse instance containing the combined responses.
+        """
+        from .CombinedResponse import CombinedResponse
+        return CombinedResponse([self, other])

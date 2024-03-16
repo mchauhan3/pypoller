@@ -1,0 +1,107 @@
+\doxysection{USVisa\+Resource\+Checker Class Reference}
+\hypertarget{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker}{}\label{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker}\index{USVisaResourceChecker@{USVisaResourceChecker}}
+Inheritance diagram for USVisa\+Resource\+Checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_ad1969f6bcf6535eea0ddb02910b704e1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, embassy\+\_\+id, schedule\+\_\+id, facility\+\_\+id, \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a54d2f15998812593d0244fad4a55091c}{user\+\_\+email}}, \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a9dbb300e28bc21c8dab41b01883918eb}{password}})
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a03f83679452065e1dfd2b550d4b2dc1a}{check\+\_\+resource}} (self, \mbox{\hyperlink{classpoller-framework_1_1resource_1_1request_1_1_date_range_request_1_1_date_range_request}{Date\+Range\+Request}} date\+\_\+range)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker}{Resource\+Checker}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_a5851436f4e012e6c18660c3326e3ae7d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_ad3e87c91b781ea2f1b791a08ea7602ed}{dates\+\_\+url}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a59abb23483199d073ed6271c67ccad49}{sign\+\_\+in\+\_\+url}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a54d2f15998812593d0244fad4a55091c}{user\+\_\+email}}
+\item 
+\mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a9dbb300e28bc21c8dab41b01883918eb}{password}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Resource checker for US Visa availability.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_ad1969f6bcf6535eea0ddb02910b704e1}\label{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_ad1969f6bcf6535eea0ddb02910b704e1} 
+\index{USVisaResourceChecker@{USVisaResourceChecker}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!USVisaResourceChecker@{USVisaResourceChecker}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{embassy\+\_\+id,  }\item[{}]{schedule\+\_\+id,  }\item[{}]{facility\+\_\+id,  }\item[{}]{user\+\_\+email,  }\item[{}]{password }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the US Visa Resource Checker.
+
+Args:
+    embassy_id (str): ID of the embassy.
+    schedule_id (str): ID of the schedule.
+    facility_id (str): ID of the facility.
+    user_email (str): User email for authentication.
+    password (str): Password for authentication.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a03f83679452065e1dfd2b550d4b2dc1a}\label{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a03f83679452065e1dfd2b550d4b2dc1a} 
+\index{USVisaResourceChecker@{USVisaResourceChecker}!check\_resource@{check\_resource}}
+\index{check\_resource@{check\_resource}!USVisaResourceChecker@{USVisaResourceChecker}}
+\doxysubsubsection{\texorpdfstring{check\_resource()}{check\_resource()}}
+{\footnotesize\ttfamily check\+\_\+resource (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpoller-framework_1_1resource_1_1request_1_1_date_range_request_1_1_date_range_request}{Date\+Range\+Request}}}]{date\+\_\+range }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check the availability of US Visa appointments within the given date range.
+
+Args:
+    date_range (DateRangeRequest): The date range for which appointments are to be checked.
+
+Returns:
+    USVisaResponse: The response containing available dates.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_ae446f3f0a7c1b548c33a4f51a2ba8898}{Resource\+Checker}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_ad3e87c91b781ea2f1b791a08ea7602ed}\label{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_ad3e87c91b781ea2f1b791a08ea7602ed} 
+\index{USVisaResourceChecker@{USVisaResourceChecker}!dates\_url@{dates\_url}}
+\index{dates\_url@{dates\_url}!USVisaResourceChecker@{USVisaResourceChecker}}
+\doxysubsubsection{\texorpdfstring{dates\_url}{dates\_url}}
+{\footnotesize\ttfamily dates\+\_\+url}
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a9dbb300e28bc21c8dab41b01883918eb}\label{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a9dbb300e28bc21c8dab41b01883918eb} 
+\index{USVisaResourceChecker@{USVisaResourceChecker}!password@{password}}
+\index{password@{password}!USVisaResourceChecker@{USVisaResourceChecker}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily password}
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a59abb23483199d073ed6271c67ccad49}\label{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a59abb23483199d073ed6271c67ccad49} 
+\index{USVisaResourceChecker@{USVisaResourceChecker}!sign\_in\_url@{sign\_in\_url}}
+\index{sign\_in\_url@{sign\_in\_url}!USVisaResourceChecker@{USVisaResourceChecker}}
+\doxysubsubsection{\texorpdfstring{sign\_in\_url}{sign\_in\_url}}
+{\footnotesize\ttfamily sign\+\_\+in\+\_\+url}
+
+\Hypertarget{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a54d2f15998812593d0244fad4a55091c}\label{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a54d2f15998812593d0244fad4a55091c} 
+\index{USVisaResourceChecker@{USVisaResourceChecker}!user\_email@{user\_email}}
+\index{user\_email@{user\_email}!USVisaResourceChecker@{USVisaResourceChecker}}
+\doxysubsubsection{\texorpdfstring{user\_email}{user\_email}}
+{\footnotesize\ttfamily user\+\_\+email}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+resource/\mbox{\hyperlink{_u_s_visa_resource_checker_8py}{USVisa\+Resource\+Checker.\+py}}\end{DoxyCompactItemize}
