@@ -2,6 +2,7 @@ from typing import List, Iterable
 from util.decorators import non_null_args
 from . import Message, Contact, CombinedMessage
 
+
 class Notifier:
     """
     Base class for notifying contacts with messages.
@@ -49,6 +50,7 @@ class Notifier:
             CombinedNotifier: A new CombinedNotifier instance containing the combined Notifiers.
         """
         from . import CombinedNotifier
+
         return CombinedNotifier([self, other])
 
     @non_null_args
@@ -70,4 +72,3 @@ class Notifier:
             contacts (Iterable[Contact]): The contacts to be added.
         """
         self.contacts.extend(contacts)
-

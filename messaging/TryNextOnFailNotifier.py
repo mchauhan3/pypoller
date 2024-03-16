@@ -2,6 +2,7 @@ from util.decorators import non_null_args
 from . import Notifier, Message
 from .NotificationException import NotificationException
 
+
 class TryNextOnFailNotifier(Notifier):
     """
     Notifier class that tries each notifier in sequence until one succeeds.
@@ -39,4 +40,3 @@ class TryNextOnFailNotifier(Notifier):
                 pass
 
         raise NotificationException("No successful notifiers")
-

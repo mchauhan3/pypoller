@@ -2,6 +2,7 @@ from typing import Iterable
 from . import Message, Contact, Notifier
 from util.decorators import non_null_args
 
+
 class CombinedNotifier(Notifier):
     """
     Notifier class for combining multiple notifiers into one.

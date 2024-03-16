@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class Message:
     """
@@ -24,4 +25,5 @@ class Message:
             CombinedMessage: A new CombinedMessage instance containing the combined messages.
         """
         from .CombinedMessage import CombinedMessage
+
         return CombinedMessage(underlying_messages=[self, other])

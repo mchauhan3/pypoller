@@ -25,4 +25,4 @@ class NotificationException(Exception):
         Returns:
             str: The string representation of the exception.
         """
-        return f'{self.message} \n Underlying exception: {self.underlying}'
+        return f"{self.message} \n Underlying exception: {self.underlying}"

@@ -1,5 +1,6 @@
 from messaging import Notifier, Message
 
+
 class ConsoleNotifier(Notifier):
     """
     Notifier class for printing messages to the console.

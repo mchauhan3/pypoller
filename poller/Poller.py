@@ -4,6 +4,7 @@ from resource import ResourceChecker
 from messaging import Notifier, ConsoleNotifier
 from util.decorators import non_null_args
 
+
 class Poller:
     """
     Class for polling a resource checker and notifying a notifier periodically.
@@ -13,7 +14,9 @@ class Poller:
         notifier (Notifier, optional): The notifier to be used for notifications. Defaults to ConsoleNotifier().
     """
 
-    def __init__(self, checker: ResourceChecker, notifier: Notifier = ConsoleNotifier()):
+    def __init__(
+        self, checker: ResourceChecker, notifier: Notifier = ConsoleNotifier()
+    ):
         """
         Initialize the Poller with a resource checker and a notifier.
 

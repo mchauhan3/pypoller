@@ -10,25 +10,29 @@ import datetime as dt
 import json
 
 # JavaScript block for making the request to get availabile dates
-JS_SCRIPT = ("() => {"
-             "var req = new XMLHttpRequest();"
-             "req.open('GET', '%s', false);"
-             "req.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');"
-             "req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');"
-             "req.send(null);"
-             "return req.responseText;"
-             "};")
+JS_SCRIPT = (
+    "() => {"
+    "var req = new XMLHttpRequest();"
+    "req.open('GET', '%s', false);"
+    "req.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');"
+    "req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');"
+    "req.send(null);"
+    "return req.responseText;"
+    "};"
+)
 
 
 DATE_FORMAT = "%Y-%m-%d"
+
 
 @dataclass
 class USVisaResponse(Response):
     """
     Response class for US Visa availability check.
     """
+
     available_dates: List[str] = field(default_factory=lambda: [])
-    
+
     def to_message(self) -> Message:
         """
         Convert the response to a message format.
@@ -42,10 +46,10 @@ class USVisaResponse(Response):
         if not self.available_dates:
             return Message()
 
-        message_body = (
-            f'Found dates for US Visa: {[d.strftime(DATE_FORMAT) for d in self.available_dates]}')
+        message_body = f"Found dates for US Visa: {[d.strftime(DATE_FORMAT) for d in self.available_dates]}"
 
         return Message(body=message_body)
+
 
 class USVisaResourceChecker(ResourceChecker):
     """

@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from messaging import Message
 
+
 @dataclass(kw_only=True)
 class Response:
     """
@@ -29,4 +30,5 @@ class Response:
             CombinedResponse: A new CombinedResponse instance containing the combined responses.
         """
         from .CombinedResponse import CombinedResponse
+
         return CombinedResponse([self, other])

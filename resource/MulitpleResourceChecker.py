@@ -32,7 +32,10 @@ class MultipleResourceChecker(ResourceChecker):
         Returns:
             Response: The aggregated response from all resource checkers.
         """
-        return reduce(lambda x, y: x + y, [checker.check_resource(request) for checker in self.checkers])
+        return reduce(
+            lambda x, y: x + y,
+            [checker.check_resource(request) for checker in self.checkers],
+        )
 
     def __add__(self, other):
         """

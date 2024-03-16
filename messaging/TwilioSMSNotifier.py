@@ -4,6 +4,7 @@ from util.decorators import non_null_args
 from messaging import Notifier, Contact, Message
 from messaging.NotificationException import NotificationException
 
+
 class TwilioSMSNotifier(Notifier):
     """
     Notifier class for sending SMS messages via Twilio.
@@ -11,7 +12,13 @@ class TwilioSMSNotifier(Notifier):
     Uses Twilio's REST API to send SMS messages to contacts.
     """
 
-    def __init__(self, account_sid: str, auth_token: str, phone_number: str, contacts: List[Contact] = []):
+    def __init__(
+        self,
+        account_sid: str,
+        auth_token: str,
+        phone_number: str,
+        contacts: List[Contact] = [],
+    ):
         """
         Initialize the TwilioSMSNotifier.
 
@@ -58,9 +65,7 @@ class TwilioSMSNotifier(Notifier):
         """
         try:
             self.client.messages.create(
-                from_=self.phone_number,
-                to=phone_number,
-                body=message_body
+                from_=self.phone_number, to=phone_number, body=message_body
             )
         except Exception as e:
             raise NotificationException("Exception when calling Twilio", e)

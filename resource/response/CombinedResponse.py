@@ -13,7 +13,7 @@ class CombinedResponse(Response):
     """
 
     underlying_responses: List[Response]
-    
+
     def to_message(self) -> Message:
         """
         Convert the combined response to a message format.
@@ -21,7 +21,10 @@ class CombinedResponse(Response):
         Returns:
             Message: The message containing the combined response body.
         """
-        return reduce((lambda x, y: x + y), [resp.to_message() for resp in self.underlying_responses])
+        return reduce(
+            (lambda x, y: x + y),
+            [resp.to_message() for resp in self.underlying_responses],
+        )
 
     def __add__(self, other):
         """
@@ -34,7 +37,8 @@ class CombinedResponse(Response):
             CombinedResponse: A new CombinedResponse instance containing the combined responses.
         """
         if isinstance(other, CombinedResponse):
-            return CombinedResponse(self.underlying_responses + other.underlying_responses)
+            return CombinedResponse(
+                self.underlying_responses + other.underlying_responses
+            )
 
         return CombinedResponse(self.underlying_responses + [other])
-
