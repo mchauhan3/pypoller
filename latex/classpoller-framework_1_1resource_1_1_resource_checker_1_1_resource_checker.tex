@@ -15,6 +15,11 @@ Inheritance diagram for Resource\+Checker\+:\begin{figure}[H]
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for checking the availability of a resource.
+\end{DoxyVerb}
+ 
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_a5851436f4e012e6c18660c3326e3ae7d}\label{classpoller-framework_1_1resource_1_1_resource_checker_1_1_resource_checker_a5851436f4e012e6c18660c3326e3ae7d} 
 \index{ResourceChecker@{ResourceChecker}!\_\_add\_\_@{\_\_add\_\_}}
@@ -22,7 +27,18 @@ Inheritance diagram for Resource\+Checker\+:\begin{figure}[H]
 \doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
 {\footnotesize\ttfamily \+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}Combine two resource checkers into a single MultipleResourceChecker.
 
+This method is used to create a new checker that combines the functionality of the current checker
+and another checker.
+
+Args:
+    other (ResourceChecker): The other resource checker to be combined with.
+
+Returns:
+    MultipleResourceChecker: Combined resource checker object.
+\end{DoxyVerb}
+ 
 
 Reimplemented in \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_a5851436f4e012e6c18660c3326e3ae7d}{Multiple\+Resource\+Checker}}.
 
@@ -32,7 +48,15 @@ Reimplemented in \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple
 \doxysubsubsection{\texorpdfstring{check\_resource()}{check\_resource()}}
 {\footnotesize\ttfamily  \mbox{\hyperlink{classpoller-framework_1_1resource_1_1response_1_1_response_1_1_response}{Response}} check\+\_\+resource (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpoller-framework_1_1resource_1_1request_1_1_request_1_1_request}{Request}}}]{request }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}Check the availability of a resource based on the given request.
 
+Args:
+    request (Request): The request object representing the resource to be checked.
+
+Returns:
+    Response: The response object containing the result of the resource check.
+\end{DoxyVerb}
+ 
 
 Reimplemented in \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker_ac02dcf9e8db94169d8f7aa5b47ad5123}{Parks\+Canada\+Checker}}, \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker_a03f83679452065e1dfd2b550d4b2dc1a}{USVisa\+Resource\+Checker}}, and \mbox{\hyperlink{classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker_ae446f3f0a7c1b548c33a4f51a2ba8898}{Multiple\+Resource\+Checker}}.
 

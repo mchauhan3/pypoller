@@ -6,6 +6,7 @@ var hierarchy =
     ] ],
     [ "Message", "classpoller-framework_1_1messaging_1_1_message_1_1_message.html", null ],
     [ "Notifier", "classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier.html", [
+      [ "CombinedNotifier", "classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier.html", null ],
       [ "ConsoleNotifier", "classpoller-framework_1_1messaging_1_1_console_notifier_1_1_console_notifier.html", null ],
       [ "TwilioSMSNotifier", "classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier.html", null ]
     ] ],
@@ -25,9 +26,6 @@ var hierarchy =
     ] ],
     [ "Message", null, [
       [ "CombinedMessage", "classpoller-framework_1_1messaging_1_1_combined_message_1_1_combined_message.html", null ]
-    ] ],
-    [ "Notifier", null, [
-      [ "CombinedNotifier", "classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier.html", null ]
     ] ],
     [ "Notifier", null, [
       [ "TryNextOnFailNotifier", "classpoller-framework_1_1messaging_1_1_try_next_on_fail_notifier_1_1_try_next_on_fail_notifier.html", null ]

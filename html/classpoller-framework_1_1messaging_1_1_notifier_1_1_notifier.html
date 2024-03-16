@@ -104,8 +104,9 @@ Inheritance diagram for Notifier:</div>
  <div class="center">
   <img src="classpoller-framework_1_1messaging_1_1_notifier_1_1_notifier.png" usemap="#Notifier_map" alt=""/>
   <map id="Notifier_map" name="Notifier_map">
-<area href="classpoller-framework_1_1messaging_1_1_console_notifier_1_1_console_notifier.html" alt="ConsoleNotifier" shape="rect" coords="0,56,112,80"/>
-<area href="classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier.html" alt="TwilioSMSNotifier" shape="rect" coords="122,56,234,80"/>
+<area href="classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier.html" alt="CombinedNotifier" shape="rect" coords="0,56,112,80"/>
+<area href="classpoller-framework_1_1messaging_1_1_console_notifier_1_1_console_notifier.html" alt="ConsoleNotifier" shape="rect" coords="122,56,234,80"/>
+<area href="classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier.html" alt="TwilioSMSNotifier" shape="rect" coords="244,56,356,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -157,7 +158,7 @@ Public Attributes</h2></td></tr>
 Args:
     contacts (List[Contact], optional): List of contacts to be notified. Defaults to an empty list.
 </pre> 
-<p>Reimplemented in <a class="el" href="classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier.html#a4ac38972e8d00b6828a98df4f3595538">TwilioSMSNotifier</a>.</p>
+<p>Reimplemented in <a class="el" href="classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier.html#ad20e71519d0a7572a981de75c14ac552">CombinedNotifier</a>, and <a class="el" href="classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier.html#a4ac38972e8d00b6828a98df4f3595538">TwilioSMSNotifier</a>.</p>
 
 </div>
 </div>
@@ -213,6 +214,8 @@ Returns:
 Args:
     contact (Contact): The contact to be added.
 </pre> 
+<p>Reimplemented in <a class="el" href="classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier.html#a14e6fc31bd79dfeec8c6d886e7f6df8e">CombinedNotifier</a>.</p>
+
 </div>
 </div>
 <a id="ae9b01f32ef036ebc5bd46e8b5cc65ed4" name="ae9b01f32ef036ebc5bd46e8b5cc65ed4"></a>
@@ -238,6 +241,8 @@ Args:
 Args:
     contacts (Iterable[Contact]): The contacts to be added.
 </pre> 
+<p>Reimplemented in <a class="el" href="classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier.html#ae9b01f32ef036ebc5bd46e8b5cc65ed4">CombinedNotifier</a>.</p>
+
 </div>
 </div>
 <a id="a536554e9a27e5d57334999aa1d58bf42" name="a536554e9a27e5d57334999aa1d58bf42"></a>
@@ -288,7 +293,7 @@ Args:
 Args:
     msg (Message): The message to be sent.
 </pre> 
-<p>Reimplemented in <a class="el" href="classpoller-framework_1_1messaging_1_1_console_notifier_1_1_console_notifier.html#a03c110f8cb3db34a3b8b7a9ac97a25ed">ConsoleNotifier</a>, and <a class="el" href="classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier.html#a03c110f8cb3db34a3b8b7a9ac97a25ed">TwilioSMSNotifier</a>.</p>
+<p>Reimplemented in <a class="el" href="classpoller-framework_1_1messaging_1_1_combined_notifier_1_1_combined_notifier.html#a03c110f8cb3db34a3b8b7a9ac97a25ed">CombinedNotifier</a>, <a class="el" href="classpoller-framework_1_1messaging_1_1_console_notifier_1_1_console_notifier.html#a03c110f8cb3db34a3b8b7a9ac97a25ed">ConsoleNotifier</a>, and <a class="el" href="classpoller-framework_1_1messaging_1_1_twilio_s_m_s_notifier_1_1_twilio_s_m_s_notifier.html#a03c110f8cb3db34a3b8b7a9ac97a25ed">TwilioSMSNotifier</a>.</p>
 
 </div>
 </div>

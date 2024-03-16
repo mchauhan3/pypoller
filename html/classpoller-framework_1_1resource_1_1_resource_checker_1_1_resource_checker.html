@@ -116,7 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5851436f4e012e6c18660c3326e3ae7d" id="r_a5851436f4e012e6c18660c3326e3ae7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5851436f4e012e6c18660c3326e3ae7d">__add__</a> (self, other)</td></tr>
 <tr class="separator:a5851436f4e012e6c18660c3326e3ae7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">Base class for checking the availability of a resource.
+</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5851436f4e012e6c18660c3326e3ae7d" name="a5851436f4e012e6c18660c3326e3ae7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5851436f4e012e6c18660c3326e3ae7d">&#9670;&#160;</a></span>__add__()</h2>
 
@@ -135,7 +137,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">Combine two resource checkers into a single MultipleResourceChecker.
 
+This method is used to create a new checker that combines the functionality of the current checker
+and another checker.
+
+Args:
+    other (ResourceChecker): The other resource checker to be combined with.
+
+Returns:
+    MultipleResourceChecker: Combined resource checker object.
+</pre> 
 <p>Reimplemented in <a class="el" href="classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker.html#a5851436f4e012e6c18660c3326e3ae7d">MultipleResourceChecker</a>.</p>
 
 </div>
@@ -158,7 +170,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">Check the availability of a resource based on the given request.
 
+Args:
+    request (Request): The request object representing the resource to be checked.
+
+Returns:
+    Response: The response object containing the result of the resource check.
+</pre> 
 <p>Reimplemented in <a class="el" href="classpoller-framework_1_1resource_1_1_parks_canada_checker_1_1_parks_canada_checker.html#ac02dcf9e8db94169d8f7aa5b47ad5123">ParksCanadaChecker</a>, <a class="el" href="classpoller-framework_1_1resource_1_1_u_s_visa_resource_checker_1_1_u_s_visa_resource_checker.html#a03f83679452065e1dfd2b550d4b2dc1a">USVisaResourceChecker</a>, and <a class="el" href="classpoller-framework_1_1resource_1_1_mulitple_resource_checker_1_1_multiple_resource_checker.html#ae446f3f0a7c1b548c33a4f51a2ba8898">MultipleResourceChecker</a>.</p>
 
 </div>
