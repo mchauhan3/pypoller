@@ -1,6 +1,6 @@
 [project]
 name = "pypoller"
-version = "0.1.3"
+version = "0.1.4"
 description = "Lightweight polling and notification framework"
 readme = "README.md"
 authors = [{name = "Mohit Chauhan", email = "mhchauhan3@gmail.com"}]
