@@ -1,5 +1,5 @@
 from typing import Iterable
-from . import Message, Contact, Notifier
+from messaging import Message, Contact, Notifier
 from util.decorators import non_null_args
 
 
