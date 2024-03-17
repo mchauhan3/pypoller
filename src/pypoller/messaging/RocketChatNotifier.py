@@ -64,6 +64,9 @@ class RocketChatNotifier(Notifier):
         Args:
             msg (Message): The message to send.
         """
+        if len(msg.body) == 0:
+            return
+        
         for contact in self.contacts:
             if msg.is_error and not contact.notify_error:
                 continue
