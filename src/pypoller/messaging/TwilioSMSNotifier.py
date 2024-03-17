@@ -38,11 +38,23 @@ class TwilioSMSNotifier(Notifier):
 
     @non_null_args
     def add_contact(self, contact: Contact):
+        """
+        Add a phone contact to the list of contacts.
+
+        Args:
+            contact (Contact): The contact to be added.
+        """
         if isinstance(contact, PhoneContact):
             self.contacts.append(contact)
 
     @non_null_args
     def add_contacts(self, contacts: Iterable[Contact]):
+        """
+        Add multiple phone contacts to the list of contacts.
+
+        Args:
+            contacts (Iterable[Contact]): The contacts to be added.
+        """
         self.contacts.extend(
             filter(lambda contact: isinstance(contact, PhoneContact), contacts)
         )
