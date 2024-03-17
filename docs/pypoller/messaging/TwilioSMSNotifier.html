@@ -46,6 +46,12 @@
                                 <a class="variable" href="#TwilioSMSNotifier.contacts">contacts</a>
                         </li>
                         <li>
+                                <a class="function" href="#TwilioSMSNotifier.add_contact">add_contact</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#TwilioSMSNotifier.add_contacts">add_contacts</a>
+                        </li>
+                        <li>
                                 <a class="function" href="#TwilioSMSNotifier.notify_inner">notify_inner</a>
                         </li>
                         <li>
@@ -94,7 +100,7 @@
                             <div id="TwilioSMSNotifier.__init__" class="classattr">
                                 <div class="attr function">
             
-        <span class="name">TwilioSMSNotifier</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">account_sid</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">auth_token</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">phone_number</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">contacts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n"><a href="Contact.html#Contact">pypoller.messaging.Contact.Contact</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></span>)</span>
+        <span class="name">TwilioSMSNotifier</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">account_sid</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">auth_token</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">phone_number</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">contacts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n"><a href="contact/Contact.html#Contact">pypoller.messaging.contact.Contact.Contact</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></span>)</span>
 
         
     </div>
@@ -102,11 +108,14 @@
     
             <div class="docstring"><p>Initialize the TwilioSMSNotifier.</p>
 
-<p>Args:
-    account_sid (str): Twilio account SID.
-    auth_token (str): Twilio authentication token.
-    phone_number (str): Twilio phone number used for sending messages.
-    contacts (List[Contact], optional): List of contacts to be notified. Defaults to an empty list.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>account_sid (str):</strong>  Twilio account SID.</li>
+<li><strong>auth_token (str):</strong>  Twilio authentication token.</li>
+<li><strong>phone_number (str):</strong>  Twilio phone number used for sending messages.</li>
+<li><strong>contacts (List[Contact], optional):</strong>  List of contacts to be notified. Defaults to an empty list.</li>
+</ul>
 </div>
 
 
@@ -144,6 +153,50 @@
     
 
                             </div>
+                            <div id="TwilioSMSNotifier.add_contact" class="classattr">
+                                <div class="attr function">
+                    <div class="decorator">@non_null_args</div>
+
+        <span class="def">def</span>
+        <span class="name">add_contact</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">contact</span><span class="p">:</span> <span class="n"><a href="contact/Contact.html#Contact">pypoller.messaging.contact.Contact.Contact</a></span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#TwilioSMSNotifier.add_contact"></a>
+    
+            <div class="docstring"><p>Add a single contact to the list of contacts.</p>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>contact (Contact):</strong>  The contact to be added.</li>
+</ul>
+</div>
+
+
+                            </div>
+                            <div id="TwilioSMSNotifier.add_contacts" class="classattr">
+                                <div class="attr function">
+                    <div class="decorator">@non_null_args</div>
+
+        <span class="def">def</span>
+        <span class="name">add_contacts</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">contacts</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n"><a href="contact/Contact.html#Contact">pypoller.messaging.contact.Contact.Contact</a></span><span class="p">]</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#TwilioSMSNotifier.add_contacts"></a>
+    
+            <div class="docstring"><p>Add multiple contacts to the list of contacts.</p>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>contacts (Iterable[Contact]):</strong>  The contacts to be added.</li>
+</ul>
+</div>
+
+
+                            </div>
                             <div id="TwilioSMSNotifier.notify_inner" class="classattr">
                                 <div class="attr function">
                     <div class="decorator">@non_null_args</div>
@@ -157,8 +210,11 @@
     
             <div class="docstring"><p>Notify the contacts with the given message via SMS.</p>
 
-<p>Args:
-    msg (Message): The message to be sent.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>msg (Message):</strong>  The message to be sent.</li>
+</ul>
 </div>
 
 
@@ -175,9 +231,12 @@
     
             <div class="docstring"><p>Send an SMS message using Twilio's REST API.</p>
 
-<p>Args:
-    message_body (str): The body of the message.
-    phone_number (str): The phone number of the recipient.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>message_body (str):</strong>  The body of the message.</li>
+<li><strong>phone_number (str):</strong>  The phone number of the recipient.</li>
+</ul>
 </div>
 
 
@@ -187,8 +246,6 @@
                                 <dl>
                                     <div><dt><a href="Notifier.html#Notifier">pypoller.messaging.Notifier.Notifier</a></dt>
                                 <dd id="TwilioSMSNotifier.notify" class="function"><a href="Notifier.html#Notifier.notify">notify</a></dd>
-                <dd id="TwilioSMSNotifier.add_contact" class="function"><a href="Notifier.html#Notifier.add_contact">add_contact</a></dd>
-                <dd id="TwilioSMSNotifier.add_contacts" class="function"><a href="Notifier.html#Notifier.add_contacts">add_contacts</a></dd>
 
             </div>
                                 </dl>

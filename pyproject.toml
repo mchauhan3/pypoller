@@ -16,7 +16,8 @@ dependencies = [
 	"playwright",
 	"twilio",
 	"typing_extensions",
-	"python-dotenv"
+	"python-dotenv",
+	"rocketchat_API"
 ]
 
 [project.urls]

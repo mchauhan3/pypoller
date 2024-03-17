@@ -61,7 +61,7 @@ pypoller    </h1>
 
 <p>pypoller is a lightweight and easy-to-use framework for polling a resource at regular intervals and providing notifications on any updates. It is designed to simplify the process of monitoring a remote service for changes and alerting users or systems when relevant updates occur.</p>
 
-<p>Detailed docs available at <a href="https://www.mohitc.com/pypoller/docs/">https://www.mohitc.com/pypoller/docs/</a></p>
+<p>Detailed docs available <a href="https://www.mohitc.com/pypoller/docs/">here</a>.</p>
 
 <h2 id="features">Features</h2>
 
@@ -69,6 +69,20 @@ pypoller    </h1>
 <li><p><strong>Polling</strong>: The library allows you to define a polling interval, specifying how frequently the resource should be checked for updates.</p></li>
 <li><p><strong>Notifications</strong>: When a change is detected in the service, the library supports customizable notification mechanisms. Currently messaging via Twilio is implemented.</p></li>
 <li><p><strong>Configurability</strong>: The library is highly configurable and extensible. Adding support for any notification mechanism or resource should be seamless.</p></li>
+</ul>
+
+<p>Currently implemented resource checkers:</p>
+
+<ul>
+<li>US Visa appointments</li>
+<li>Parks Canada campsites</li>
+</ul>
+
+<p>Currently implemented notifier:</p>
+
+<ul>
+<li>SMS (via Twilio)</li>
+<li>Rocket.Chat</li>
 </ul>
 
 <p>All submodules can be used independently as well. For example, to check for availability of US Visa appointments:</p>
@@ -104,9 +118,7 @@ response = availability_checker.check_resource(date_range_request)
 
 <p>Refer to examples to learn how to use the library.</p>
 
-<p>To provide twilio credentials for the examples, create a <code>.env</code> file by copying the <code>.env.sample</code> file, and replace the placeholder twilio parameters to enable notifications via SMS.</p>
-
-<p>If twilio credentials are not provided, notifications will be printed to console.</p>
+<p>To provide twilio / rocketchat credentials for the examples, create a <code>.env</code> file by copying the <code>env.sample</code> file, and replace the placeholder twilio parameters to enable notifications via SMS.</p>
 </div>
 
                 
