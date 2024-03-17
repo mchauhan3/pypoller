@@ -1,19 +1,14 @@
+from pypoller.messaging.contact import PhoneContact
 from pypoller.poller import Poller
 from pypoller.resource import USVisaResourceChecker
 from pypoller.resource.request import DateRangeRequest
 from pypoller.messaging import (
-    Contact,
     TwilioSMSNotifier,
     ConsoleNotifier,
     TryNextOnFailNotifier,
 )
 import datetime as dt
 from dotenv import load_dotenv
-from pypoller.util.constants import (
-    TWILIO_AUTH_TOKEN_KEY,
-    TWILIO_PHONE_NUMBER_KEY,
-    TWILIO_ACCOUNT_SID_KEY,
-)
 import os
 
 # change for your use
@@ -31,6 +26,10 @@ availability_checker = USVisaResourceChecker(
 # Load Twilio credentials from environment variables
 load_dotenv()
 notifier = None
+
+TWILIO_ACCOUNT_SID_KEY = "TWILIO_ACCOUNT_SID"
+TWILIO_AUTH_TOKEN_KEY = "TWILIO_AUTH_TOKEN"
+TWILIO_PHONE_NUMBER_KEY = "TWILIO_PHONE_NUMBER"
 
 try:
     # Attempt to initialize Twilio notifier
@@ -55,10 +54,13 @@ def configure_contacts():
         # Collect contact information from user input
         name = input("Contact name? \n")
         phone_number = input("Phone number? \n")
-        email = input("Email?")
         notify_error = input("Should be notified on errors? Y/N \n") == "Y"
         # Create Contact object and append to contacts list
-        contacts.append(Contact(name, phone_number, email, notify_error))
+        contacts.append(
+            PhoneContact(
+                name=name, phone_number=phone_number, notify_error=notify_error
+            )
+        )
         print("Added contact!")
         # Prompt user to add another contact
         add_contact = input("Add another contact? Y/N \n")

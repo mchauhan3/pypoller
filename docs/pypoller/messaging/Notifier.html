@@ -92,7 +92,7 @@
                             <div id="Notifier.__init__" class="classattr">
                                 <div class="attr function">
             
-        <span class="name">Notifier</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">contacts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n"><a href="Contact.html#Contact">pypoller.messaging.Contact.Contact</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></span>)</span>
+        <span class="name">Notifier</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">contacts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n"><a href="contact/Contact.html#Contact">pypoller.messaging.contact.Contact.Contact</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></span>)</span>
 
         
     </div>
@@ -100,8 +100,11 @@
     
             <div class="docstring"><p>Initialize the Notifier with a list of contacts.</p>
 
-<p>Args:
-    contacts (List[Contact], optional): List of contacts to be notified. Defaults to an empty list.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>contacts (List[Contact], optional):</strong>  List of contacts to be notified. Defaults to an empty list.</li>
+</ul>
 </div>
 
 
@@ -129,8 +132,11 @@
     
             <div class="docstring"><p>Notify the contacts with the given message.</p>
 
-<p>Args:
-    msg (Message): The message to be sent.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>msg (Message):</strong>  The message to be sent.</li>
+</ul>
 </div>
 
 
@@ -147,8 +153,11 @@
     
             <div class="docstring"><p>Abstract method to handle notification of a single message.</p>
 
-<p>Args:
-    msg (Message): The message to be sent.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>msg (Message):</strong>  The message to be sent.</li>
+</ul>
 </div>
 
 
@@ -158,7 +167,7 @@
                     <div class="decorator">@non_null_args</div>
 
         <span class="def">def</span>
-        <span class="name">add_contact</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">contact</span><span class="p">:</span> <span class="n"><a href="Contact.html#Contact">pypoller.messaging.Contact.Contact</a></span></span><span class="return-annotation">):</span></span>
+        <span class="name">add_contact</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">contact</span><span class="p">:</span> <span class="n"><a href="contact/Contact.html#Contact">pypoller.messaging.contact.Contact.Contact</a></span></span><span class="return-annotation">):</span></span>
 
         
     </div>
@@ -166,8 +175,11 @@
     
             <div class="docstring"><p>Add a single contact to the list of contacts.</p>
 
-<p>Args:
-    contact (Contact): The contact to be added.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>contact (Contact):</strong>  The contact to be added.</li>
+</ul>
 </div>
 
 
@@ -177,7 +189,7 @@
                     <div class="decorator">@non_null_args</div>
 
         <span class="def">def</span>
-        <span class="name">add_contacts</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">contacts</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n"><a href="Contact.html#Contact">pypoller.messaging.Contact.Contact</a></span><span class="p">]</span></span><span class="return-annotation">):</span></span>
+        <span class="name">add_contacts</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span>, </span><span class="param"><span class="n">contacts</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n"><a href="contact/Contact.html#Contact">pypoller.messaging.contact.Contact.Contact</a></span><span class="p">]</span></span><span class="return-annotation">):</span></span>
 
         
     </div>
@@ -185,8 +197,11 @@
     
             <div class="docstring"><p>Add multiple contacts to the list of contacts.</p>
 
-<p>Args:
-    contacts (Iterable[Contact]): The contacts to be added.</p>
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>contacts (Iterable[Contact]):</strong>  The contacts to be added.</li>
+</ul>
 </div>
 
 

@@ -1,6 +1,7 @@
 from typing import List, Iterable
 from pypoller.util.decorators import non_null_args
-from . import Message, Contact, CombinedMessage
+from . import Message, CombinedMessage
+from .contact import Contact
 
 
 class Notifier:

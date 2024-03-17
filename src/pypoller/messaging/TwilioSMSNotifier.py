@@ -1,8 +1,9 @@
-from typing import List
+from typing import List, Iterable
 from twilio.rest import Client
 from pypoller.util.decorators import non_null_args
-from . import Notifier, Contact, Message
+from . import Notifier, Message
 from .NotificationException import NotificationException
+from .contact import Contact, PhoneContact
 
 
 class TwilioSMSNotifier(Notifier):
@@ -31,7 +32,20 @@ class TwilioSMSNotifier(Notifier):
         super().__init__(contacts)
         self.client = Client(account_sid, auth_token)
         self.phone_number = phone_number
-        self.contacts = contacts
+        self.contacts = list(
+            filter(lambda contact: isinstance(contact, PhoneContact), self.contacts)
+        )
+
+    @non_null_args
+    def add_contact(self, contact: Contact):
+        if isinstance(contact, PhoneContact):
+            self.contacts.append(contact)
+
+    @non_null_args
+    def add_contacts(self, contacts: Iterable[Contact]):
+        self.contacts.extend(
+            filter(lambda contact: isinstance(contact, PhoneContact), contacts)
+        )
 
     @non_null_args
     def notify_inner(self, msg: Message):
