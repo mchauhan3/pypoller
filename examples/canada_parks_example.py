@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from pypoller.poller import Poller
 from pypoller.resource import ParksCanadaChecker
 from pypoller.resource.request import DateRangeRequest
-from util.constants import (
+from pypoller.util.constants import (
     TWILIO_AUTH_TOKEN_KEY,
     TWILIO_PHONE_NUMBER_KEY,
     TWILIO_ACCOUNT_SID_KEY,
