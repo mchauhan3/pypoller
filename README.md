@@ -10,8 +10,7 @@ Detailed docs available [here](https://www.mohitc.com/pypoller/docs/).
 
 - **Polling**: The library allows you to define a polling interval, specifying how frequently the resource should be checked for updates.
 
-- **Notifications**: When a change is detected in the service, the library supports customizable notification mechanisms. Currently messaging via Twilio is implemented.
-
+- **Notifications**: When a change is detected in the service, the library supports customizable notification mechanisms.
 - **Configurability**: The library is highly configurable and extensible. Adding support for any notification mechanism or resource should be seamless.
 
 Currently implemented resource checkers:
