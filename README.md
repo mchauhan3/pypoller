@@ -1,5 +1,3 @@
-# pypoller
-
 ## Overview
 
 ![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fmchauhan3%2Fpypoller%2Fmaster%2Fpyproject.toml)
@@ -23,7 +21,7 @@ Currently implemented resource checkers:
 - US Visa appointments
 - Parks Canada campsites
 
-Currently implemented notifier:
+Currently implemented notifiers:
 - SMS (via Twilio)
 - Rocket.Chat
 
@@ -48,6 +46,53 @@ date_range_request = DateRangeRequest(
 
 response = availability_checker.check_resource(date_range_request)
 ```
+
+Modules of the same base type (`Notifier` / `ResourceChecker`) can be combined as well, for eg. 
+```
+us_visa_checker = USVisaResourceChecker(
+    EMBASSY_ID, SCHEDULE_ID, FACILITY_ID, USER_EMAIL, PASSWORD
+)
+
+parks_canada_checker = ParksCanadaChecker(
+    resource_id=GREEN_POINT_DRIVE_IN_CAMPSITES_ID,
+    equipment_category_id=EQUIPMENT_CATEGORY_ID,
+    sub_equipment_category_id=SUB_EQUIPMENT_CATEGORY_ID,
+)
+
+aggregate_checker = us_visa_checker + parks_canada_checker
+
+date_range_request = DateRangeRequest(
+    start_date=dt.datetime(2024, 3, 14),
+    end_date=dt.datetime(2025, 7, 1),
+)
+response = aggregate_checker.check_resource(date_range_request)
+```
+
+This will check both resources with the input.
+
+Similarly for notifiers:
+```
+twilio_notifier = TwilioSMSNotifier(
+        twilio_account_sid,
+        twilio_auth_token,
+        twilio_phone_number
+)
+
+rocket_chat_notifier = RocketChatNotifier(
+    user,
+    password,
+    server_url
+)
+
+aggregate_notifier = twilio_notifier + rocket_chat_notifier
+aggregate_notifier.add_contacts([<LIST_OF_CONTACTS>])
+
+aggregate_notifier.notify(new Message("test"))
+```
+This will send both (1) an SMS via twilio and (2) a rocket chat message.
+
+
+
 ## Installation
 
 `pip install pypoller`
