@@ -2,6 +2,12 @@
 
 ## Overview
 
+![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fmchauhan3%2Fpypoller%2Fmaster%2Fpyproject.toml)
+![GitHub License](https://img.shields.io/github/license/mchauhan3/pypoller)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/pypoller)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/mchauhan3/pypoller)
+
+
 pypoller is a lightweight and easy-to-use framework for polling a resource at regular intervals and providing notifications on any updates. It is designed to simplify the process of monitoring a remote service for changes and alerting users or systems when relevant updates occur.
 
 Detailed docs available [here](https://www.mohitc.com/pypoller/docs/).
